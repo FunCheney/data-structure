@@ -5,7 +5,7 @@ package com.fchen.datastructure.array;
  * @Classname Array
  * @Description 使用java中的数组模拟创建动态数组
  * @Date 2019/4/26 13:35
- * @Author by Fchen
+ * @Author by FChen
  */
 public class Array<E> {
     /**
@@ -105,11 +105,27 @@ public class Array<E> {
      * @param index 索引
      * @return  该索引对应的元素
      */
-    public Object getIndex(int index){
+    public E getIndex(int index){
         if(index < 0 || index >= size){
             throw new ArrayIndexOutOfBoundsException();
         }
         return data[index];
+    }
+
+    /**
+     * 获取数组中最后一个元素
+     * @return
+     */
+    public E getLast(){
+        return getIndex(size - 1);
+    }
+
+    /**
+     * 获取数组中第一个元素
+     * @return
+     */
+    public E getFirst(){
+        return getIndex(0);
     }
 
     /**
@@ -157,7 +173,7 @@ public class Array<E> {
      * @param index
      * @return 返回删除的元素
      */
-    public Object remove(int index){
+    public E remove(int index){
         if(index < 0 || index >= size){
             throw new ArrayIndexOutOfBoundsException();
         }
@@ -177,7 +193,7 @@ public class Array<E> {
      * 删除数组中的第一元素
      * @return
      */
-    public Object removeFirst(){
+    public E removeFirst(){
        return remove(0);
     }
 
@@ -195,7 +211,7 @@ public class Array<E> {
      * 删除数组中的最后一个元素
      * @return
      */
-    public Object removeLast(){
+    public E removeLast(){
         return remove(size - 1);
     }
     @Override
