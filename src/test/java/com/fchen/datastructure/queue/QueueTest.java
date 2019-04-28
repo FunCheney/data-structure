@@ -16,4 +16,16 @@ public class QueueTest {
     public void testArrayQueue(){
 
     }
+    @Test
+    public void LoopQueue(){
+        LoopQueue<Integer> loopQueue = new LoopQueue<>(10);
+        for(int i = 0; i < 10; i++){
+            loopQueue.enqueue(i);
+            log.info(loopQueue.toString());
+            if(i % 3 == 2){
+                loopQueue.dequeue();
+                log.info(loopQueue.toString());
+            }
+        }
+    }
 }
