@@ -40,12 +40,12 @@ public class LinkedList<E> {
     /**
      * 链表头
      */
-    private Node head;
+    private Node dummyHead;
 
     private int size;
 
     public LinkedList(){
-        head = null;
+        dummyHead = new Node(null, null);
         size = 0;
     }
 
@@ -65,6 +65,21 @@ public class LinkedList<E> {
         return size == 0;
     }
 
+    public void add(int index, E e){
+        if(index < 0 || index > size){
+            throw new IllegalArgumentException("Index Illegal");
+        }
+        Node prev = dummyHead;
+        for(int i = 0; i < index; i++){
+            prev = prev.next;
+        }
+//            Node node = new Node(e);
+//            node.next = prev.next;
+//            prev.next = node;
+        prev.next = new Node(e,prev.next);
+        size++;
+    }
+
     /**
      * 链表头添加元素
      * @param e
@@ -73,27 +88,7 @@ public class LinkedList<E> {
 //        Node node = new Node(e,null);
 //        node.next = head;
 //        head = node;
-        head = new Node(e,head);
-        size++;
-    }
-
-    public void add(int index, E e){
-        if(index < 0 || index > size){
-            throw new IllegalArgumentException("Index Illegal");
-        }
-        if(index == 0){
-            addFirst(e);
-        }else{
-            Node prev = head;
-            for(int i = 0; i < index - 1; i++){
-                prev = prev.next;
-            }
-//            Node node = new Node(e);
-//            node.next = prev.next;
-//            prev.next = node;
-            prev.next = new Node(e,prev.next);
-            size++;
-        }
+        add(0,e);
     }
 
     /**
