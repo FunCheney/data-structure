@@ -2,7 +2,7 @@ package com.fchen.datastructure.linkedlist;
 
 /**
  * @Classname LinkedList
- * @Description 链表类
+ * @Description 链表 单链表
  * @Date 2019/4/27 21:02
  * @Author by Chen
  */
