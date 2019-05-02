@@ -7,15 +7,15 @@ package com.fchen.datastructure.tree.binarysearchtree;
  * @Author by Chen
  */
 public class Node<E extends Comparable<E>>{
-    private E e;
+    public E e;
     /**
      * 左节点
      */
-    private Node left;
+    public Node left;
     /**
      * 右节点
      */
-    private Node right;
+    public Node right;
 
     public Node(E e) {
         this.e = e;
