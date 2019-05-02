@@ -21,4 +21,15 @@ public class StackTest {
         stack.pop();
         log.info(stack.toString());
     }
+
+    @Test
+    public void testLinkedListStack(){
+        LinkedListStack<Integer> stack = new LinkedListStack<>();
+        for(int i = 0; i < 3; i++){
+            stack.push(i);
+            log.info(stack.toString());
+        }
+        stack.pop();
+        log.info(stack.toString());
+    }
 }
