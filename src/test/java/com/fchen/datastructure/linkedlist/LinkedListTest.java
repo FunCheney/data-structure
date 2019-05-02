@@ -20,5 +20,11 @@ public class LinkedListTest {
         }
         linkedList.add(2,666);
         log.info(linkedList.toString());
+        linkedList.remove(2);
+        log.info(linkedList.toString());
+        linkedList.removeFirst();
+        log.info(linkedList.toString());
+        linkedList.removeLast();
+        log.info(linkedList.toString());
     }
 }
