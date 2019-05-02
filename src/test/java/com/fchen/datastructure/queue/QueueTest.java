@@ -28,4 +28,17 @@ public class QueueTest {
             }
         }
     }
+
+    @Test
+    public void LinkedListQueue(){
+        LinkedListQueue<Integer> linkedListQueue = new LinkedListQueue<>();
+        for(int i = 0; i < 10; i++){
+            linkedListQueue.enqueue(i);
+            log.info(linkedListQueue.toString());
+            if(i % 2 == 0){
+                linkedListQueue.dequeue();
+                log.info(linkedListQueue.toString());
+            }
+        }
+    }
 }
