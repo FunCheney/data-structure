@@ -1,2 +1,2 @@
- ## 动态数组
+ ## 队列
  ![alt text](./linkedlist/data-mapper.png "Data Mapper")
