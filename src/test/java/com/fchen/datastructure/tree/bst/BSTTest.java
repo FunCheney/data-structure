@@ -42,4 +42,23 @@ public class BSTTest {
         }
         bst.postOrder();
     }
+
+    @Test
+    public void testBstPreOrderNR(){
+        BST<Integer> bst = new BST<>();
+        int arr[] = {5,3,6,8,4,2};
+        for(int num : arr){
+            bst.add(num);
+        }
+        bst.preOrderNR();
+    }
+    @Test
+    public void testBstLevelOrder(){
+        BST<Integer> bst = new BST<>();
+        int arr[] = {5,3,6,8,4,2};
+        for(int num : arr){
+            bst.add(num);
+        }
+        bst.levelOrder();
+    }
 }

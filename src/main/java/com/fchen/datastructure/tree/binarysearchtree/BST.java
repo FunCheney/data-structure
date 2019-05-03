@@ -1,5 +1,9 @@
 package com.fchen.datastructure.tree.binarysearchtree;
 
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
 /**
  * @Classname BST
  * @Description 二分搜索树实现类
@@ -104,6 +108,25 @@ public class BST<E extends Comparable<E>> {
     }
 
     /**
+     * 二分搜索树非递归遍历
+     */
+    public void preOrderNR(){
+        Stack<Node> stack = new Stack<>();
+        stack.push(root);
+        while (!stack.isEmpty()){
+            Node cur = stack.pop();
+            System.out.println(cur.e);
+            if(cur.right != null){
+                stack.push(cur.right);
+
+            }
+            if(cur.left != null){
+                stack.push(cur.left);
+            }
+        }
+    }
+
+    /**
      * 中序遍历二分搜索树
      * 中序遍历的结果是顺序的
      */
@@ -138,6 +161,21 @@ public class BST<E extends Comparable<E>> {
         postOrder(node.left);
         postOrder(node.right);
         System.out.println(node.e);
+    }
+
+    public void levelOrder(){
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()){
+            Node cur = queue.remove();
+            System.out.println(cur.e);
+            if (cur.left != null){
+                queue.add(cur.left);
+            }
+            if(cur.right != null){
+                queue.add(cur.right);
+            }
+        }
     }
     @Override
     public String toString() {
