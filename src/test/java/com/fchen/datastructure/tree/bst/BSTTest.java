@@ -61,4 +61,26 @@ public class BSTTest {
         }
         bst.levelOrder();
     }
+
+    @Test
+    public void testBstRemoveMin(){
+        BST<Integer> bst = new BST<>();
+        int arr[] = {5,3,6,8,4,2};
+        for(int num : arr){
+            bst.add(num);
+        }
+        Integer min = bst.removeMin();
+        log.info("min elm is:{}",min);
+    }
+
+    @Test
+    public void testBstRemoveMax(){
+        BST<Integer> bst = new BST<>();
+        int arr[] = {5,3,6,8,4,2};
+        for(int num : arr){
+            bst.add(num);
+        }
+        Integer max = bst.removeMax();
+        log.info("min elm is:{}",max);
+    }
 }

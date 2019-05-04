@@ -177,6 +177,96 @@ public class BST<E extends Comparable<E>> {
             }
         }
     }
+
+    /**
+     * 寻找二分搜索树的最小值
+     * @return
+     */
+    public E minimum(){
+        if(size == 0){
+            throw new IllegalArgumentException("BST is empty");
+        }
+        Node minimum = minimum(root);
+        return (E)minimum.e;
+    }
+
+    /**
+     * 返回以Node为根节点的二分搜索树的最小值所在节点
+     * @param node
+     * @return
+     */
+    private Node minimum(Node node){
+        if(node.left == null){
+            return node;
+        }
+        return minimum(node.left);
+    }
+
+    /**
+     * 寻找二分搜索树的最大值
+     * @return
+     */
+    public E maximum(){
+        if(size == 0){
+            throw new IllegalArgumentException("BST is empty");
+        }
+        Node maximum = maximum(root);
+        return (E)maximum.e;
+    }
+
+    public Node maximum(Node node){
+        if(node.right == null){
+           return node;
+        }
+        return maximum(node.right);
+    }
+
+    /**
+     * 删除最小值所在节点，返回最小值
+     * @return
+     */
+    public E removeMin(){
+        E res = minimum();
+        root = removeMin(root);
+        return res;
+    }
+
+    /**
+     * 删除以Node为根的二分搜索树的最小节点
+     * 返回删除节点后二分搜索树的根
+     * @param node
+     * @return
+     */
+    private Node removeMin(Node node){
+        if(node.left == null){
+            Node rightNode = node.right;
+            node.right = null;
+            size--;
+            return rightNode;
+        }
+        node.left = removeMin(node.left);
+        return node;
+    }
+    /**
+     * 删除最大值所在节点，返回最大值
+     * @return
+     */
+    public E removeMax(){
+        E res = maximum();
+        root = removeMax(root);
+        return res;
+    }
+    private Node removeMax(Node node){
+        if(node.right == null){
+            Node leftNode = node.left;
+            node.left = null;
+            size--;
+            return leftNode;
+        }
+        node.right = removeMin(node.right);
+        return node;
+    }
+
     @Override
     public String toString() {
         StringBuilder res = new StringBuilder();
