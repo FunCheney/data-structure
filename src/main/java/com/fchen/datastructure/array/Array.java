@@ -207,6 +207,15 @@ public class Array<E> {
             remove(index);
         }
     }
+
+    public void swap(int i, int j){
+        if(i < 0 || i >= size || j < 0 || j >= size){
+            throw new IllegalArgumentException("index illegal");
+        }
+        E t = data[i];
+        data[i] = data[j];
+        data[j] = t;
+    }
     /**
      * 删除数组中的最后一个元素
      * @return
