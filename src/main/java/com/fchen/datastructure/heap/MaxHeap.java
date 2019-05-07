@@ -21,6 +21,19 @@ public class MaxHeap<E extends Comparable<E>> {
     }
 
     /**
+     * 使用heapify 的方式创建堆
+     * @param arr
+     */
+    public MaxHeap(E[] arr){
+        data = new Array<>(arr);
+        //第一个非叶子节点的索引
+        int parent = parent(arr.length - 1);
+        for(int i = parent; i >=0; i++){
+            siftDown(i);
+        }
+    }
+
+    /**
      * 堆中有多少个元素
      * @return
      */
@@ -81,5 +94,52 @@ public class MaxHeap<E extends Comparable<E>> {
             k = parent(k);
       }
     }
+
+    public E findMax(){
+        if(data.getSize() == 0){
+            throw new IllegalArgumentException("heap is empty");
+        }
+        return data.getIndex(0);
+    }
+
+    /**
+     * 取出堆中的最大元素
+     * @return
+     */
+    public E extractMax(){
+        E res = findMax();
+        data.swap(0,data.getSize() - 1);
+        data.removeLast();
+        siftDown(0);
+        return res;
+    }
+
+    private void siftDown(int k){
+        while (leftChild(k) < data.getSize()){
+            int j = leftChild(k);
+            if((k + 1) < data.getSize() && data.getIndex(j + 1).compareTo(data.getIndex(j)) > 0){
+                j = rightChild(k);
+            }
+            //data[j] 是 leftChild 和 rightChild 中的最大值
+            if(data.getIndex(j).compareTo(data.getIndex(k)) >= 0){
+                data.swap(k,j);
+                k = j;
+            }
+        }
+    }
+
+    /**
+     * 将堆中的最大元素取出，并加入一个新的元素
+     * @param e
+     * @return
+     */
+    public E repalce(E e){
+        E ret = findMax();
+        data.set(e,0);
+        siftDown(0);
+        return ret;
+    }
+
+
 
 }
