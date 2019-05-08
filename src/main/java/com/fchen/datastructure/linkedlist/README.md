@@ -8,7 +8,7 @@
  ### 双向链表(doubly linked list)
 &ensp;&ensp;每一个对象都有一个关键字key和两个指正：next和prev。对象中还可以包含其他的辅助数据(或称为卫星数据)。设x为链表的一个元素，x.next指向它在链表中的后继元素，x.prev则指向它的前驱元素。如果x.prev == null，则x元素没有前驱，因此是链表的第一个元素，即链表头(head)。如果x.next == null，则x没有后继，因此是链表的最后一个元素，即链表尾(tail)。
 
-### 循环链表(circular list)
+### 循环链表(circular linked list)
 &ensp;&ensp;表头元素的prev指针指向表尾元素，而表尾元素的next指针则指向表头元素。
 
 
