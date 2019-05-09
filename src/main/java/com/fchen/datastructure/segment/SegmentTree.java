@@ -96,6 +96,29 @@ public class SegmentTree<E> {
 
     }
 
+    //在treeIndex 为根的线段树中更新index位置的元素值为e
+    public void set(int index, E e){
+        if(index < 0 || index >= data.length){
+            throw new IllegalArgumentException("index Illegal");
+        }
+        set(0, 0, data.length - 1, index, e);
+    }
+
+    private void set(int treeIndex, int L, int R, int index, E e){
+        if( L == R){
+            tree[treeIndex] = e;
+            return;
+        }
+        int mid = L + (R - L) / 2;
+        int leftTreeIndex = leftChild(index);
+        int rightTreeIndex = rightChild(index);
+        if(index >= mid + 1){
+            set(rightTreeIndex, mid + 1, R, index, e);
+        }else {
+            set(leftTreeIndex, L, mid, index, e);
+        }
+        tree[treeIndex] = merger.merger(tree[leftTreeIndex],tree[rightTreeIndex]);
+    }
     public int getSize(){
         return data.length;
     }
