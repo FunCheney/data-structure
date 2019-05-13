@@ -62,6 +62,7 @@ public class AVLTree <K extends Comparable<K>,V>{
         return getHeight(node.left) - getHeight(node.right);
     }
 
+    //RR
     private Node rightRotate(Node y){
 
         Node x = y.left;
@@ -70,6 +71,21 @@ public class AVLTree <K extends Comparable<K>,V>{
         //向右旋转的过程
         x.right = y;
         y.left = t3;
+        //更新height
+        y.height = Math.max(getHeight(y.left),getHeight(y.right)) + 1;
+        x.height = Math.max(getHeight(x.left),getHeight(x.right)) + 1;
+        return x;
+    }
+
+    //LL
+    private Node leftRotate(Node y){
+
+        Node x = y.right;
+        Node t3 = x.left;
+
+        //向右旋转的过程
+        x.left = y;
+        y.right = t3;
         //更新height
         y.height = Math.max(getHeight(y.left),getHeight(y.right)) + 1;
         x.height = Math.max(getHeight(x.left),getHeight(x.right)) + 1;
@@ -135,12 +151,23 @@ public class AVLTree <K extends Comparable<K>,V>{
         node.height = 1 + Math.max(getHeight(node.left),getHeight(node.right));
         //计算平衡因子
         int balanceFactor = getBalanceFactor(node);
-        if(Math.abs(balanceFactor) > 1){
-            System.out.println("unBalance");
-        }
+
         //平衡维护
         if(Math.abs(balanceFactor) > 1 && getBalanceFactor(node.left) >=0){
             return rightRotate(node);
+        }
+        if(balanceFactor < -1 && getBalanceFactor(node.right) <= 0){
+            return leftRotate(node);
+        }
+        //LR
+        if(balanceFactor > 1 && getBalanceFactor(node.left) < 0){
+            node.left = leftRotate(node.left);
+            return rightRotate(node);
+        }
+        //RL
+        if(balanceFactor < -1 && getBalanceFactor(node.right) > 0){
+            node.right = rightRotate(node.right);
+            return leftRotate(node);
         }
         return node;
     }
