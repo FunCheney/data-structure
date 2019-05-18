@@ -61,7 +61,7 @@ java代码：
  ```$xslt
 TREE-MAXMUM(node)
    while(node.right != null)
-       TREE-MINMUM(node.right)
+       TREE-MANMUM(node.right)
    return node.key
 ```
 java代码：
@@ -75,6 +75,21 @@ java代码：
 *  3.如果结点node没有右子树，那么由于node左子树中的每个关键字都不大于node.key，则以node为跟的子树中的最大关键字为node.key。
 *  4.如果结点node有右子树，那么由于右子树中的所有关键字都不小于node.key，则以node为根的字树中的最大关键字一定在以node.right为根的字树中。
 
+**后继和前驱**:
+
+ &ensp;&ensp;给定一棵二分搜索树中的一个结点，有时需要按中序遍历的方式查找它的后继，如果所有的关键字互补相同，这一个节点node的后继是大于node.key的最小关键字的结点。
+ 
+ 伪代码：
+ ```
+TREE-SUCCESSOR(node)
+  if node.right != null
+      return TREE-MINMUN(node.right)
+  y = node.p
+  while y != null && x == node.right
+      x = y
+      y = y.p
+  return y
+```
  #### 4.二分搜索树的插入与删除
  
 
