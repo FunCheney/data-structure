@@ -1,6 +1,8 @@
 package com.fchen.datastructure.array;
 
 
+import java.util.ArrayList;
+
 /**
  * @Classname Array
  * @Description 使用java中的数组模拟创建动态数组
@@ -27,6 +29,10 @@ public class Array<E> {
         size = 0;
     }
 
+    /**
+     * 传入数组方式构建动态数组
+     * @param arr
+     */
     public Array(E[] arr){
         data = (E[]) new Object[arr.length];
         for (int i = 0; i < arr.length; i++){
