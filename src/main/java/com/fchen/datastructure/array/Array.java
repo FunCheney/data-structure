@@ -95,10 +95,10 @@ public class Array<E> {
      */
     public void addIndex(E e,int index){
         if(index < 0 || index > size){
-            throw new ArrayIndexOutOfBoundsException();
+            throw new ArrayIndexOutOfBoundsException("index out of bound");
         }
         if(size == data.length){
-            resize(2 * data.length);
+            resize(data.length + (data.length >> 1));
         }
         for (int i = size - 1; i >= index; i--) {
             data[i + 1] = data[i];
@@ -189,7 +189,7 @@ public class Array<E> {
      */
     public E remove(int index){
         if(index < 0 || index >= size){
-            throw new ArrayIndexOutOfBoundsException();
+            throw new ArrayIndexOutOfBoundsException("index out of bound");
         }
         E res = data[index];
         for(int i = index; i < size - 1; i++){
