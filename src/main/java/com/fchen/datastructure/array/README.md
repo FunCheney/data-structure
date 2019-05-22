@@ -64,6 +64,7 @@ private void resize(int newCapacity){
 }
 ```
 示意图:
+
 ![image](https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/array/image/arrResize1.gif "arrResize")
 
 ##### 1.3 数组的缩容
