@@ -1,7 +1,11 @@
- ## 动态数组
- #### 1 数组示意图:
-  ![image](https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/array/image/arr.png "arr")
- ##### 1.1 动态数组的初始化
+## 动态数组
+#### 1 数组示意图:
+
+<div align="center">
+   <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/array/image/arr.png">
+</div>
+
+##### 1.1 动态数组的初始化
  ```
 /**
  * 存储数组中元素
@@ -65,14 +69,19 @@ private void resize(int newCapacity){
 ```
 示意图:
 
-![image](https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/array/image/arrResize1.gif "arrResize")
+<div align="center">
+   <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/array/image/arrResize1.gif">
+</div>
 
 ###### 1.2.2.缩容
  &ensp;&ensp;删除数组中的元素时，当数组中元素的个数为原数组的 1/4 时动态的修改数组的容量。(1)新建一个临时数组容量变为原来的1/2倍；(2)将原数组中的元素复制到临时数组中;
  (3)将临时数组指向原来的数组。
  
  示意图:
- ![image](https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/array/image/arrResize2.gif "arrResize2")
+ 
+<div align="center">
+   <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/array/image/arrResize2.gif">
+</div>
  
 #### 2 数组的操作:
 ##### 2.1 数组中添加元素(添加在某一索引):
@@ -113,7 +122,10 @@ public void addIndex(E e,int index){
 }
 ```
 添加元素示意图:
-![image](https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/array/image/add.gif "add")
+
+<div align="center">
+   <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/array/image/add.gif">
+</div>
 
 ##### 2.2 数组中删除元素(删除某一索引的元素):
 * 1.首先验证要删除索引的合法性
@@ -151,7 +163,10 @@ public E remove(int index){
 }
 ```
 删除元素示意图:
-![image](https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/array/image/remove.gif "remove")
+
+<div align="center">
+   <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/array/image/remove.gif">
+</div>
 
 ##### 2.3 数组中修改元素(替换某一索引的元素)
 java代码实现:
