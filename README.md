@@ -14,7 +14,7 @@
 #### 1.1 数组
  &ensp;&ensp;线性表的顺序表示是指用一组地址连续的存储单元一次存储线性表的数据元素。数组能够顺序存储相同类型的多个数据。
  访问数组中的某个元素的方法是将其编号然后索引。如果有N个值，它们的编号是0至N-1。
-##### 1.1.1 动态数组
+##### 1.1.1 [动态数组]
  &ensp;&ensp;在申明数组的时，需要指定数组的名称和它包含的类型，在创建数组时，需要指定数组的长度。指定数组的长度后，若改长度不可改变，
  这就一意味着，改数组中不能存放更多的元素。因此，我们需要动态的更新数组容量的大小。
  
@@ -86,5 +86,5 @@
 
 
 
-[更多动态数组内容]:https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/array/README.md
+[动态数组]:https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/array/README.md
  

@@ -1,4 +1,6 @@
  ### 动态数组
+ 
+ =============
  #### 1 数组示意图:
   ![image](https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/array/image/arr.png "arr")
  ##### 1.1 动态数组的初始化
