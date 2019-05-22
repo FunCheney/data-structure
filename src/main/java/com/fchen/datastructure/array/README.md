@@ -1,6 +1,6 @@
  ### 动态数组
  #### 1 数组示意图:
-  ![alt text](./linkedlist/data-mapper.png "Data Mapper")
+  ![image](https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/array/image/arr.png "arr")
  ##### 1.1 动态数组的初始化
  ```
 /**
@@ -64,9 +64,9 @@ private void resize(int newCapacity){
 }
 ```
 示意图:
+![image](https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/array/image/arrResize1.gif "arrResize")
 
-
-##### 1.3 数组的缩荣
+##### 1.3 数组的缩容
  
 
 #### 2 数组的操作:
