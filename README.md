@@ -18,9 +18,18 @@
  &ensp;&ensp;在申明数组的时，需要指定数组的名称和它包含的类型，在创建数组时，需要指定数组的长度。指定数组的长度后，若改长度不可改变，
  这就一意味着，改数组中不能存放更多的元素。因此，我们需要动态的更新数组容量的大小。
  
-#### 1.2 链表
+#### 1.2 [链表]
+**定义**: 链表是一种递归的数据结构，它或者为空(null),或者指向一个结点(node)的引用,该结点含有一个泛型的元素和一个指向另一结点的引用。
+
  &ensp;&ensp;线性表的链式存储结构，由于它不要求逻辑上相邻的元素在物理位置上也相邻，因此它没有顺序存储结构所具有的弱点，但同时
  也失去了顺序表可随机存取的优点。
+ **链表中结点的结构**
+ ```
+NODE{
+    E e        //当前节点的元素
+    NODE next  //下一个节点的引用
+}
+```
 #### 1.3 队列
 #### 1.4 栈
 ### 2.树结构
@@ -86,4 +95,5 @@
 
 
 [动态数组]:https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/array/README.md
+[链表]:https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/linkedlist/README.md
  
