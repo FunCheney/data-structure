@@ -52,6 +52,10 @@ L.head=null，则链表为空。
 #### 3.循环链表(circular linked list)
 &ensp;&ensp;表头元素的prev指针指向表尾元素，而表尾元素的next指针则指向表头元素。
 
+单向链表和双向链表都可以有循环链表，下面以双向链表为例:
+
+&ensp;&ensp;**哨兵**(sentinel)是一个哑对象，其作用是简化边界条件的处理。
+
 
 
 
