@@ -38,7 +38,7 @@ public class LinkedList<E> {
     }
 
     /**
-     * 链表头
+     * 虚拟的头结点
      */
     private Node dummyHead;
 
