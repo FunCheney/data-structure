@@ -55,6 +55,82 @@ public class LinkedList<E> {
      }   
 }
 ``` 
+##### 1.1 (单)链表的插入
+&ensp;&esnp;给定某一元素e,通过LIST-INSERT将其添加到链表中给定的某一位置。
+
+伪代码如下：
+```
+LIST-INSERT(index,e)
+    if index < 0 or index > size
+        throw new IllegalArgumentException("Index Illegal")
+    Node cur = L.head  //哨兵
+    while i < index
+        cur = cur.next
+        i++
+    // 当前节点的下一结点为新加入的结点
+    // 新加入节点的下一节点为当前结点的下一结点
+    cur.next = Node(e,cur.next) 
+    size++ 
+```
+示例图如下：
+ <div align="center">
+    <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/linkedlist/image/linkedadd.jpg">
+ </div>
+ 
+ &ensp;&ensp;向链表中的第一个位置，或者最后一个位置加入元素，调用上述的过程即可完成相应的操作。
+ 
+##### 1.2 (单)链表的删除
+&ensp;&ensp;给定某一位置的节点，使用LIST-DELETE将其删除。并返回该节点的关键字key
+```
+LIST-DELETE(index)
+     if index < 0 or index > size
+           throw new IllegalArgumentException("Index Illegal")
+     Node cur = L.head  //哨兵
+     while(i < index)
+         cur = cur.next
+         i++
+     Node delNode = cur.next
+     cur.next = delNode.next
+     delNode.next = null
+     size--
+     return delNode.key
+```
+
+示例图如下：
+ <div align="center">
+    <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/linkedlist/image/linkedremove.jpg">
+ </div>
+ 
+  &ensp;&ensp;删除链表中的第一个或者最后一个结点，调用上述的过程即可完成相应的操作。
+
+##### 1.2 (单)链表的搜索
+&ensp;&ensp;过程LIST—SEARCH(e)采用简单的线性搜索方法，用于查找链表中第一个关键字为e的元素，并返回该结点。如果链表中没有关键字为e的对象，则返回空结点。
+
+伪代码：
+```
+LIST-SEARCH(e)
+    Node cur = L.head  //哨兵
+    while cur != null and cur.key != e
+        cur = cur.next
+    return cur
+```
+示例图如下：
+ <div align="center">
+    <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/linkedlist/image/linkedsearch.jpg">
+ </div>
+&ensp;&ensp;过程LIST—SEARCH(index)查找链表中某一位置的结点。
+
+伪代码:
+```
+LIST-SEARCH(index)
+    Node cur = L.head 
+    while i < index
+        cur = cur.next
+        i++
+    return cur
+```
+ 
+ [单向链表Api Java实现]
 
 #### 2.双向链表(doubly linked list)
 &ensp;&ensp;每一个对象都有一个关键字key和两个指正：next和prev。对象中还可以包含其他的辅助数据(或称为卫星数据)。设x为链表的一个
@@ -66,6 +142,71 @@ L.head=null，则链表为空。
  <div align="center">
     <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/linkedlist/image/doublelist.jpg">
  </div>
+ 
+ **双链表的结点类**
+ ```
+ class NODE{
+     E e;
+     NODE prev;
+     NODE NEXT;
+ }
+```
+ 
+##### 2.1 (双)链表的搜索
+&ensp;&ensp;单链表的搜索与双链表的搜索类似。搜索一个有n个对象的链表，过程LIST-SEARCH最坏的情况下的运行时间为O(n),因为可能需要搜索整个链表。
+ 
+##### 2.1 (双)链表的插入
+&ensp;&esnp;给定某一元素e,通过LIST-INSERT将其添加到链表中给定的某一位置。
+```
+LIST-INSERT(index,e)
+    if index < 0 or index > size
+        throw new IllegalArgumentException("Index Illegal")
+    Node cur = L.head  //哨兵
+    while i < index
+        cur = cur.next
+        i++  
+    if cur.next != null
+        //要插入的结点
+        Node insertNode = Node(e)
+        //要插入的结点的前一结点为当前节点
+        insertNode.prev = cur
+        //要插入的结点的后一结点为当前结点的下一结点
+        insertNode.next = cur.next
+        //当前结点的下一结点指向要插入的检点
+        cur.next = insertNode
+        //当前结点的下一节点的前一结点指向要插入的节点
+        cur.next.prev = insertNode
+    else
+         Node insertNode = Node(e)
+         insertNode.prev = cur
+         insertNode.next = cur.next
+         cur.next = insertNode
+    size++ 
+```
+&ensp;&esnp;给定某一关键字key为e的结点node,通过LIST-INSERT将其添加到链表的前端。(哨兵后移)
+```
+LIST-INSERT(node)
+    node.next = L.head
+    if L.head != null
+        L.head.prev = x
+    L.head = x
+    x.prev = null
+    size++
+```
+  
+##### 2.1 (双)链表的删除
+&ensp;&ensp;过程LIST-DELETE将一个元素e从链表中删除。该过程需要给定一个指向x的指针，然后通过修改一些指针，将钙元素删除。如果要删除具有给定具有关键字值的元素，则需先调用LIST-SEARCH找到该元素。
+
+伪代码：
+```
+LIST-DELETE(NODE node)
+    if node.prev != null
+        node.prev.next = node.next
+    else
+        L.head = node.next
+    if node.next != null
+        node.next.prev = node.prev 
+```
  
 #### 3.循环链表(circular linked list)
 &ensp;&ensp;表头元素的prev指针指向表尾元素，而表尾元素的next指针则指向表头元素。
@@ -84,6 +225,17 @@ L.head=null，则链表为空。
     <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/linkedlist/image/sentinel.jpg">
  </div>
 
+
+
+
+
+
+
+[单向链表Api Java实现]
+
+[双向链表Api Java实现]
+
+[循环链表Api Java实现]
 
 
 
