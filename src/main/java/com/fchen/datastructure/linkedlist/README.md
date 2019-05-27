@@ -110,7 +110,7 @@ LIST-DELETE(Node node)
 
 示例图如下：
  <div align="center">
-    <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/linkedlist/image/linkedremove.jpg">
+    <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/linkedlist/image/linkedremove.gif">
  </div>
  
   &ensp;&ensp;删除链表中的第一个或者最后一个结点，调用上述的过程即可完成相应的操作。

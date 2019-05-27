@@ -6,5 +6,5 @@ package com.fchen.datastructure.linkedlist;
  * @Date 2019/5/26 23:24
  * @Author by Fchen
  */
-public class CircularLinkedList {
+public class CircularLinkedList<E> {
 }
