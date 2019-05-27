@@ -63,7 +63,7 @@ public class LinkedList<E> {
 LIST-INSERT(index,e)
     if index < 0 or index > size
         throw new IllegalArgumentException("Index Illegal")
-    Node cur = L.head  //哨兵
+    Node cur = L.head  //虚拟的头结点
     while i < index
         cur = cur.next
         i++
@@ -74,7 +74,7 @@ LIST-INSERT(index,e)
 ```
 示例图如下：
  <div align="center">
-    <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/linkedlist/image/linkedadd.jpg">
+    <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/linkedlist/image/linkedadd.gif">
  </div>
  
  &ensp;&ensp;向链表中的第一个位置，或者最后一个位置加入元素，调用上述的过程即可完成相应的操作。
@@ -85,7 +85,7 @@ LIST-INSERT(index,e)
 LIST-DELETE(index)
      if index < 0 or index > size
            throw new IllegalArgumentException("Index Illegal")
-     Node cur = L.head  //哨兵
+     Node cur = L.head  //虚拟的头结点
      while(i < index)
          cur = cur.next
          i++
@@ -94,6 +94,18 @@ LIST-DELETE(index)
      delNode.next = null
      size--
      return delNode.key
+```
+&ensp;&ensp;给定某一结点的引用，使用LIST-DELETE将其删除。
+```
+LIST-DELETE(Node node)
+    Node cur = L.head
+    if node.next != null
+        Node curNext = node.next
+        node.key = curNext.key
+        node.next = curNext,next
+        curNext.next = null
+    else
+        
 ```
 
 示例图如下：
@@ -109,15 +121,11 @@ LIST-DELETE(index)
 伪代码：
 ```
 LIST-SEARCH(e)
-    Node cur = L.head  //哨兵
+    Node cur = L.head  //虚拟的头结点
     while cur != null and cur.key != e
         cur = cur.next
     return cur
 ```
-示例图如下：
- <div align="center">
-    <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/linkedlist/image/linkedsearch.jpg">
- </div>
 &ensp;&ensp;过程LIST—SEARCH(index)查找链表中某一位置的结点。
 
 伪代码:
@@ -148,7 +156,7 @@ L.head=null，则链表为空。
  class NODE{
      E e;
      NODE prev;
-     NODE NEXT;
+     NODE next;
  }
 ```
  
@@ -183,7 +191,7 @@ LIST-INSERT(index,e)
          cur.next = insertNode
     size++ 
 ```
-&ensp;&esnp;给定某一关键字key为e的结点node,通过LIST-INSERT将其添加到链表的前端。(哨兵后移)
+&ensp;&ensp;给定某一关键字key为e的结点node,通过LIST-INSERT将其添加到链表的前端。(哨兵后移)
 ```
 LIST-INSERT(node)
     node.next = L.head
@@ -224,6 +232,22 @@ LIST-DELETE(NODE node)
  <div align="center">
     <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/linkedlist/image/sentinel.jpg">
  </div>
+ 
+ &ensp;&ensp;哨兵L.nil 位于表头和表尾之间。由于可通过L.nil.next访问表头，属性L.head就不需要了。
+ 
+ ##### 3.2 (循环)链表的搜索
+ 伪代码：
+ ```
+ LIST-SEARCH(e)
+     Node cur = L.nil.next //第一个节点
+     while cur != null and cur.key != e
+         cur = cur.next
+     return cur
+ ```
+ 
+ ##### 3.3 (循环)链表的插入
+ 
+ ##### 3.2 (循环)链表的删除
 
 
 
