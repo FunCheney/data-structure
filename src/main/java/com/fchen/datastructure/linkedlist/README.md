@@ -164,7 +164,7 @@ L.head=null，则链表为空。
 &ensp;&ensp;单链表的搜索与双链表的搜索类似。搜索一个有n个对象的链表，过程LIST-SEARCH最坏的情况下的运行时间为O(n),因为可能需要搜索整个链表。
  
 ##### 2.1 (双)链表的插入
-&ensp;&esnp;给定某一元素e,通过LIST-INSERT将其添加到链表中给定的某一位置。
+&ensp;&ensp;给定某一元素e,通过LIST-INSERT将其添加到链表中给定的某一位置。
 ```
 LIST-INSERT(index,e)
     if index < 0 or index > size
