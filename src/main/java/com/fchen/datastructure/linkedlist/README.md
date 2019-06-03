@@ -193,17 +193,17 @@ LIST-INSERT(index,e)
 ```
 &ensp;&ensp;给定某一关键字key为e的结点node,通过LIST-INSERT将其添加到链表的前端。(哨兵后移)
 ```
-LIST-INSERT(node)
+LIST-INSERT(Node node)
     node.next = L.head
     if L.head != null
-        L.head.prev = x
-    L.head = x
-    x.prev = null
+        L.head.prev = node
+    L.head = node
+    node.prev = null
     size++
 ```
   
 ##### 2.1 (双)链表的删除
-&ensp;&ensp;过程LIST-DELETE将一个元素e从链表中删除。该过程需要给定一个指向x的指针，然后通过修改一些指针，将钙元素删除。如果要删除具有给定具有关键字值的元素，则需先调用LIST-SEARCH找到该元素。
+&ensp;&ensp;过程LIST-DELETE将一个元素e从链表中删除。该过程需要给定一个指向x的指针，然后通过修改一些指针，将该元素删除。如果要删除具有给定具有关键字值的元素，则需先调用LIST-SEARCH找到该元素。
 
 伪代码：
 ```
