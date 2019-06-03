@@ -27,5 +27,7 @@ public class DoublyLinkedListTest {
         log.info(list.toString());
         list.removeIndex(2);
         log.info(list.toString());
+        list.removeKey(99);
+        log.info(list.toString());
     }
 }

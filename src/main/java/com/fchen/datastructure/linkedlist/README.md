@@ -169,32 +169,26 @@ L.head=null，则链表为空。
 LIST-INSERT(index,e)
     if index < 0 or index > size
         throw new IllegalArgumentException("Index Illegal")
-    Node cur = L.head  //哨兵
+    NODE cur = L.head  // 链表的头结点
     while i < index
         cur = cur.next
         i++  
-    if cur.next != null
-        //要插入的结点
-        Node insertNode = Node(e)
-        //要插入的结点的前一结点为当前节点
-        insertNode.prev = cur
-        //要插入的结点的后一结点为当前结点的下一结点
-        insertNode.next = cur.next
-        //当前结点的下一结点指向要插入的检点
-        cur.next = insertNode
-        //当前结点的下一节点的前一结点指向要插入的节点
-        cur.next.prev = insertNode
-    else
-         Node insertNode = Node(e)
-         insertNode.prev = cur
-         insertNode.next = cur.next
-         cur.next = insertNode
-    size++ 
+   // 要插入的结点
+   NODE insertNode = new NODE(e,cur,cur.next);
+   // 当前结点的下一结点为要插入的结点
+   cur.next = insertNode;
+   // 要插入结点的下一结点
+   Node insertNodeNext = insertNode.next;
+   if(insertNodeNext != null){
+       //要插入结点的下一结点的前一结点 为 要插入结点
+       insertNodeNext.prev = insertNode;
+   }
+   size++;
 ```
 &ensp;&ensp;给定某一关键字key为e的结点node,通过LIST-INSERT将其添加到链表的前端。(哨兵后移)
 ```
-LIST-INSERT(Node node)
-    node.next = L.head
+LIST-INSERT(NODE node)
+    node.next = L.head //链表的头结点
     if L.head != null
         L.head.prev = node
     L.head = node

@@ -72,18 +72,18 @@ public class DoublyLinkedList<E> {
             throw new IllegalArgumentException("Illegal Index");
         }
         Node cur = dummyHead;
-        if(index > 0){
-            for(int i = 0; i < index; i++){
-                cur = cur.next;
-            }
-            cur.next = new Node(e,cur.next,cur);
-        }else{
-            Node insertNode = new Node(e,cur.next,cur);
-            cur.next = insertNode;
-            cur = insertNode.next;
-            if(cur != null){
-                cur.prev = insertNode;
-            }
+        for(int i = 0; i < index; i++){
+            cur = cur.next;
+        }
+        // 要插入的结点
+        Node insertNode = new Node(e,cur.next,cur);
+        // 当前结点的下一结点为要插入的结点
+        cur.next = insertNode;
+        // 要插入结点的下一结点
+        Node insertNodeNext = insertNode.next;
+        if(insertNodeNext != null){
+            //要插入结点的下一结点的前一结点 为 要插入结点
+            insertNodeNext.prev = insertNode;
         }
         size++;
     }
@@ -162,9 +162,27 @@ public class DoublyLinkedList<E> {
      * @param e
      */
     public void removeKey(E e){
-
+        if(contains(e) != null){
+            Node cur = contains(e);
+            cur.prev.next = cur.next;
+            cur.next.prev = cur.prev;
+            cur.next = null;
+            cur.prev = null;
+        }else{
+            throw new IllegalArgumentException("key num Illegal");
+        }
     }
 
+    private Node contains(E e){
+        Node cur  = dummyHead.next;
+        while (cur != null){
+            if(cur.e.equals(e)){
+                return cur;
+            }
+            cur = cur.next;
+        }
+        return null;
+    }
     @Override
     public String toString() {
         StringBuilder res = new StringBuilder();
