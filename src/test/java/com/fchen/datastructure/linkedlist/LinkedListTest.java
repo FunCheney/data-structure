@@ -5,7 +5,7 @@ import org.junit.Test;
 
 /**
  * @Classname LinkedListTest
- * @Description TODO
+ * @Description 单链表实现API测试类
  * @Date 2019/4/29 23:20
  * @Author by Chen
  */
@@ -22,13 +22,15 @@ public class LinkedListTest {
         log.info(linkedList.toString());
         linkedList.removeKey(0);
         log.info(linkedList.toString());
-//        linkedList.add(2,666);
-//        log.info(linkedList.toString());
-//        linkedList.remove(2);
-//        log.info(linkedList.toString());
-//        linkedList.removeFirst();
-//        log.info(linkedList.toString());
-//        linkedList.removeLast();
-//        log.info(linkedList.toString());
+        linkedList.removeKey(2);
+        log.info(linkedList.toString());
+        linkedList.add(2,666);
+        log.info(linkedList.toString());
+        linkedList.remove(2);
+        log.info(linkedList.toString());
+        linkedList.removeFirst();
+        log.info(linkedList.toString());
+        linkedList.removeLast();
+        log.info(linkedList.toString());
     }
 }

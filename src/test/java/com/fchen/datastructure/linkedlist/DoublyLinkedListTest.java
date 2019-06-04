@@ -5,7 +5,7 @@ import org.junit.Test;
 
 /**
  * @Classname DoublyLinkedListTest
- * @Description 双向列表测试
+ * @Description 双向链表API测试
  * @Date 2019/4/29 23:20
  * @Author by Chen
  */
