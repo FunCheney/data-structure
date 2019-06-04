@@ -160,6 +160,34 @@ public class LinkedList<E> {
         return delNode.e;
     }
 
+    /**
+     * 在链表中删除关键字e所在的第一个结点
+     * @param e
+     */
+    public void removeKey(E e){
+        Node node = searchKey(e);
+        if (node != null) {
+            Node cur = dummyHead.next;
+            Node before = dummyHead;
+            while (!cur.e.equals(e)){
+                before = before.next;
+                cur = cur.next;
+            }
+            before.next = node.next;
+            node.next = null;
+            size--;
+        }else{
+            throw new IllegalArgumentException("key value is Illegal");
+        }
+    }
+
+    public Node searchKey(E e){
+        Node cur = dummyHead.next;
+        while (cur != null && !cur.e.equals(e)){
+            cur = cur.next;
+        }
+        return cur;
+    }
     public E removeFirst(){
         return remove(0);
     }

@@ -18,13 +18,17 @@ public class LinkedListTest {
             linkedList.addFirst(i);
             log.info(linkedList.toString());
         }
-        linkedList.add(2,666);
+        linkedList.removeKey(4);
         log.info(linkedList.toString());
-        linkedList.remove(2);
+        linkedList.removeKey(0);
         log.info(linkedList.toString());
-        linkedList.removeFirst();
-        log.info(linkedList.toString());
-        linkedList.removeLast();
-        log.info(linkedList.toString());
+//        linkedList.add(2,666);
+//        log.info(linkedList.toString());
+//        linkedList.remove(2);
+//        log.info(linkedList.toString());
+//        linkedList.removeFirst();
+//        log.info(linkedList.toString());
+//        linkedList.removeLast();
+//        log.info(linkedList.toString());
     }
 }

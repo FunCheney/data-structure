@@ -97,14 +97,20 @@ LIST-DELETE(index)
 ```
 &ensp;&ensp;给定某一结点的引用，使用LIST-DELETE将其删除。
 ```
-LIST-DELETE(Node node)
-    Node cur = L.head
-    if node.next != null
-        Node curNext = node.next
-        node.key = curNext.key
-        node.next = curNext,next
-        curNext.next = null
-    else
+LIST-DELETE(E e)
+    delNode = LIST-SEARCH(e)
+    if(delNode != null){
+        Node cur = L.head
+        Node prev = L.head.next
+        while prev.key != e
+            cur = cur.next
+            prev = prev.next
+        cur.next = delNode.next
+        delNode.next = null
+        size --
+    }else{
+        error
+    }
         
 ```
 
