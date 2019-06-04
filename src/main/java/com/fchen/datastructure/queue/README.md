@@ -6,9 +6,64 @@
   
   <div align="center">
      <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/array/image/quene.png">
-  </di
+  </div>
   
+ **入队操作伪代码实现**:
+ ```
+  ENQUEUE(Q, x)
+       Q[Q.tail] = x
+       if Q.tail == Q.length
+           Q.tail = 1
+       else
+           Q.tail  = Q.tail + 1
+  ```
+ **出队操作伪代码实现**:
+ ```
+ DEQUEUE(Q)
+     x = Q[Q.head]
+     if Q.head == Q.length
+         Q.head = 1
+     else
+         Q.head = Q.head + 1
+     return x
+```
+**队列的接口中的API**
+```
+public interface Queue<E> {
+    /**
+     * 入队操作
+     * @param e
+     */
+    void enqueue(E e);
+
+    /**
+     * 出队操作
+     * @return
+     */
+    E dequeue();
+
+    /**
+     * 队列大小
+     * @return
+     */
+    int getSize();
+
+    /**
+     * 是否为空
+     * @return
+     */
+    boolean isEmpty();
+
+    /**
+     * 获取队首的元素
+     * @return
+     */
+    E getFront();
+
+}
+```
  ###  1.使用数组实现队列
+
    
  ###  2.使用链表实现队列
  
