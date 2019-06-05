@@ -14,7 +14,10 @@ public class CircularLinkedListTest {
     @Test
     public void testCircularDoublyList(){
         CircularLinkedList<Integer> list = new CircularLinkedList<>();
+        log.info(list.toString());
         list.addKey(1);
+        log.info(list.toString());
+        list.addKey(2);
         log.info(list.toString());
     }
 }
