@@ -188,11 +188,50 @@ public class LinkedList<E> {
         }
         return cur;
     }
+
     public E removeFirst(){
         return remove(0);
     }
+
     public E removeLast(){
         return remove(size - 1);
+    }
+
+    /**
+     * 获取链表的倒数第K个结点
+     * @param index
+     * @return
+     */
+    public E getIndexFromLast(int index){
+        if(index < 0 || index > size){
+            throw new IllegalArgumentException("illegal Index");
+        }
+        Node cur = dummyHead.next;
+        int i = 0;
+        while (i < size - index){
+            cur = cur.next;
+            i++;
+        }
+        return cur.e;
+    }
+
+    /**
+     * 链表反转
+     * @param list
+     * @return
+     */
+    public LinkedList reverse(LinkedList list){
+        //创建新的链表
+        LinkedList newList = new LinkedList();
+        //获取当前链表的头结点
+        Node cur = list.dummyHead.next;
+        //按照当前链表的顺序遍历当前链表
+        while (cur != null){
+            // 在新链表的头位置添加当前链表的元素
+            newList.addFirst(cur.e);
+            cur = cur.next;
+        }
+        return newList;
     }
     @Override
     public String toString() {

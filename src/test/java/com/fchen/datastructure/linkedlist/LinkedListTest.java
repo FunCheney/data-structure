@@ -32,5 +32,7 @@ public class LinkedListTest {
         log.info(linkedList.toString());
         linkedList.removeLast();
         log.info(linkedList.toString());
+        Integer indexFromLast = linkedList.getIndexFromLast(2);
+        log.info("{}",indexFromLast);
     }
 }
