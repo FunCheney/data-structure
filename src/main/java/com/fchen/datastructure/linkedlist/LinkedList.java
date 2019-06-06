@@ -217,21 +217,33 @@ public class LinkedList<E> {
 
     /**
      * 链表反转
-     * @param list
      * @return
      */
-    public LinkedList reverse(LinkedList list){
-        //创建新的链表
-        LinkedList newList = new LinkedList();
+    public void reverse(){
         //获取当前链表的头结点
-        Node cur = list.dummyHead.next;
-        //按照当前链表的顺序遍历当前链表
+        Node cur = dummyHead.next;
+        Node next = null;
+        Node newDummyHead = new Node();
         while (cur != null){
-            // 在新链表的头位置添加当前链表的元素
-            newList.addFirst(cur.e);
-            cur = cur.next;
+            //先保存当前节点的下一节点
+            next = cur.next;
+            //当前结点为要插入的结点
+            Node insertNode = cur;
+            // 将要插入结点的下一结点置为null
+            insertNode.next = null;
+            // 获取新链表的第一个结点
+            Node newNext = newDummyHead.next;
+            if(newNext != null){
+                // 若第一个结点不为空，将要插入的结点新链表的第一个结点连接
+                insertNode.next = newNext;
+            }
+            // 将要插入的结点与新链表的虚拟结点连接
+            newDummyHead.next = insertNode;
+            // 控制循环原来的链表
+            cur = next;
         }
-        return newList;
+        // 将新链表的虚拟头结点指向原来链表的虚拟头结点完成反转
+        dummyHead = newDummyHead;
     }
     @Override
     public String toString() {

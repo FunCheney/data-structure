@@ -66,9 +66,12 @@ public interface Queue<E> {
  &ensp;&ensp;使用数组(array)实现队列，通过数组的索引,我们可以非常简单的完成队列的实现，队列的入队与出队操作。使用数组实现的队列，该队列的队头(Q.head)
  在数组中索引为0位置。队尾(Q.tail)在数组中索引为(array.length)的位置。
 
-队列出队示意图:
+**队列出队示意图**:
+<div align="center">
+     <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/queue/image/dequeue.gif">
+  </div>
 
-队列入队示意图:
+**队列入队示意图**:
   <div align="center">
      <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/queue/image/enqueue.gif">
   </div>

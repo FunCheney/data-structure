@@ -18,8 +18,8 @@ public class LinkedListApply1 {
             linkedList.addFirst(i);
         }
         log.info(linkedList.toString());
-        LinkedList reverse = linkedList.reverse(linkedList);
-        log.info(reverse.toString());
+        linkedList.reverse();
+        log.info(linkedList.toString());
     }
 
 }
