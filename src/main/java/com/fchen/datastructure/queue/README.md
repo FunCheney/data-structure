@@ -77,9 +77,77 @@ public interface Queue<E> {
   </div>
   
  ###  2.使用链表实现队列
+ &ensp;&ensp;使用链表实现队列，根据链表的组成，我们需要一个结点类，来表示链表的结点，结点中用来存储当前元素与后继结点的引用。根据队列的属性我们需要
+ 定义一个结点来表示队列的头，一个结点来表示队列的尾。
+ 
+ 下面看链式队列的构造：
+ ```
+ public class LinkedListQueue<E>{
+      class Node<E> {
+          public E e;
+          public Node next;
+      }
+     /**
+       * 头节点
+       */ 
+     private Node<E> head;
+     
+     /**
+       * 尾节点
+       */
+     private Node<E> tail;
+ }
+```
+**链式队列的入队伪代码实现**：
+```
+ENQUEUE(Q, x)
+      if(Q.tail == null){
+          Q.tail = x
+          Q.head = Q.tail
+      } else{
+          Q.tail.next = x
+          Q.tail = x
+      }
+      size ++
+```
+
+**链式队列的出队伪代码实现**：
+  ```
+  DEQUEUE(Q)
+      if(Q.size == 0){
+          error
+      } 
+      Node cur = Q.head
+      Q.head = cur.next
+      cur.next = null
+      if(Q.head == null){
+          Q.tail == null
+      }
+      size--
+      return cur
+ ```
+ ### 3.循环队列
+ &enap;&ensp;在队列的顺序存储结构中，设置两个指针front和tail分别指向队首所在的位置和队尾所在的位置。
+ 
+ 1. 初始化建空队列时，令front = tail = 0；
+ 2. 每当插入新的队尾元素时，tail + 1；
+ 3. 每当删除队首元素时，front + 1。
+ 
+ 在非空队列中，头指针始终指向队列头元素，尾指针始终指向队列尾元素的下一个位置
+ 
+ **循环队列的入队伪代码实现**：
+ ```
+ ENQUEUE(Q, x)
+ ```
+ 
+ **循环队列的出队伪代码实现**：
+```
+DEQUEUE(Q)
+       return cur
+```
  
  
- ###  3.循环队列
- ![alt text](./linkedlist/data-mapper.png "Data Mapper")
+ ### 4.双端队列
+ &ensp;&ensp;双端队列限插入和删除操作在表的两端进行。
  
  
