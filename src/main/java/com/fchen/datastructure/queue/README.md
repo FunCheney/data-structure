@@ -127,7 +127,7 @@ ENQUEUE(Q, x)
       return cur
  ```
  ### 3.循环队列
- &enap;&ensp;在队列的顺序存储结构中，设置两个指针head和tail分别指向队首所在的位置和队尾所在的位置。
+ &ensp;&ensp;在队列的顺序存储结构中，设置两个指针head和tail分别指向队首所在的位置和队尾所在的位置。
    <div align="center">
       <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/queue/image/loop0.jpg">
    </div>
