@@ -247,12 +247,12 @@ LIST-DELETE(NODE node)
  
  #### 3.4 (循环)链表的删除
  
-## Java实现
-[单向链表Api Java实现]
 
-[双向链表Api Java实现]
+[单向链表Api Java实现]:
 
-[循环链表Api Java实现]
+[双向链表Api Java实现]:
+
+[循环链表Api Java实现]:
 
 
 
