@@ -127,22 +127,22 @@ ENQUEUE(Q, x)
       return cur
  ```
  ### 3.循环队列
- &enap;&ensp;在队列的顺序存储结构中，设置两个指针front和tail分别指向队首所在的位置和队尾所在的位置。
+ &enap;&ensp;在队列的顺序存储结构中，设置两个指针head和tail分别指向队首所在的位置和队尾所在的位置。
    <div align="center">
       <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/queue/image/loop0.jpg">
    </div>
    
- 1. 初始化建空队列时，令front = tail = 0；
+ 1. 初始化建空队列时，令head = tail = 0；
  2. 每当插入新的队尾元素时，tail + 1；
- 3. 每当删除队首元素时，front + 1。
+ 3. 每当删除队首元素时，head + 1。
  
  在非空队列中，头指针始终指向队列头元素，尾指针始终指向队列尾元素的下一个位置。
  
  &ensp;&ensp;使用数组来构造循环队列，我们创建的数组容量为我们需容量 + 1; 之所以加1就是用来记录当循环队列满时，下一个新插入元素的位置，方便我们处理队列满的情况。
  在这种情况下：
- 1. data.length = needCapacity + 1 //创建数组的容量为需要的容量 + 1。便于理解!
- 2. tail + 1 = data.length  //当循环队列满时，新插入元素的位置(索引)
- 3. (tail + 1) % data.length == front //此时表示循环队列已满
+ 1. data.length = needCapacity + 1    // 创建数组的容量为需要的容量 + 1。便于理解!
+ 2. tail = data.length - 1            // 当循环队列满时，新插入元素的位置(索引)
+ 3. (tail + 1) % data.length == head // 此时表示循环队列已满
  
  **循环队列的入队伪代码实现**：
  ```
