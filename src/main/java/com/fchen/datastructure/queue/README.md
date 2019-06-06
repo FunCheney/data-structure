@@ -5,7 +5,7 @@
   它被存放在队尾的位置；当有一个元素出队时，该元素是队头的位置。
   
   <div align="center">
-     <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/array/image/quene.png">
+     <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/queue/image/queue1.jpg">
   </div>
   
  **入队操作伪代码实现**:
@@ -69,7 +69,10 @@ public interface Queue<E> {
 队列出队示意图:
 
 队列入队示意图:
-
+  <div align="center">
+     <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/queue/image/enqueue.gif">
+  </div>
+  
  ###  2.使用链表实现队列
  
  
