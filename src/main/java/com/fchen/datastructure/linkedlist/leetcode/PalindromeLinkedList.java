@@ -45,13 +45,20 @@ public class PalindromeLinkedList {
             lat = lat.next.next;
             pre = pre.next;
         }
+        //上述循环结束后，pre结点为该链表的的中间结点处
+        //cur为链表后半部分结点的开始结点
         ListNode cur = pre.next;
         pre.next = null;
+        //用来构造原链表的后半部分结点
         ListNode p = null;
         while (cur != null){
+            //用来控制后半部分链表的循环
             ListNode q = cur.next;
+            //让当前结点的下一结点 为结点p 第一次是null; 下一次 则为上一次插入的结点
             cur.next = p;
+            //将当前的结点赋值给
             p = cur;
+            //控制链表循环
             cur = q;
         }
         while (p != null && head != null){
