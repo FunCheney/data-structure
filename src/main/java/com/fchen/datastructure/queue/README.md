@@ -142,7 +142,7 @@ ENQUEUE(Q, x)
  在这种情况下：
  1. data.length = needCapacity + 1    // 创建数组的容量为需要的容量 + 1。便于理解!
  2. tail = data.length - 1            // 当循环队列满时，新插入元素的位置(索引)
- 3. (tail + 1) % data.length == head // 此时表示循环队列已满
+ 3. (tail + 1) % data.length == head  // 此时表示循环队列已满
  
  **循环队列的入队伪代码实现**：
  ```
