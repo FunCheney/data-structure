@@ -39,25 +39,27 @@ public class PalindromeLinkedList {
         if(head == null || head.next == null){
             return true;
         }
-        ListNode next = head.next;
-        ListNode cur = head;
-        while (next != null && next.next != null){
-            next = next.next.next;
-            cur = cur.next;
+        ListNode lat = head.next;
+        ListNode pre = head;
+        while (lat != null && lat.next != null){
+            lat = lat.next.next;
+            pre = pre.next;
         }
-        ListNode newHead = cur;
-        newHead.next = null;
+        ListNode cur = pre.next;
+        pre.next = null;
         ListNode p = null;
         while (cur != null){
-            ListNode insertNode = cur;
-            insertNode.next = p;
-            cur = cur.next;
+            ListNode q = cur.next;
+            cur.next = p;
+            p = cur;
+            cur = q;
         }
-        p = cur;
         while (p != null && head != null){
             if(p.val != head.val){
                 return false;
             }
+            p = p.next;
+            head = head.next;
         }
         return true;
     }
