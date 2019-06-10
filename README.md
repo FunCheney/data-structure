@@ -41,7 +41,7 @@ NODE{
 #### 1.3 [队列]
  &ensp;&ensp;**定义**: 队列是一种动态集合，他实现的是一种先进先出(first-in,first-out FIFO)策略。
 #### 1.4 [栈]
-&ensp;&ensp;**定义**: 
+&ensp;&ensp;**定义**: 栈是一种动态集合，他实现的是一种后进先出(first-in,last-out FILO)策略。 
 ## 二. 非线性结构
 ### 1 树结构
 &ensp;&ensp;树(Tree)是n(n ≥ 0)个结点的有限集。在任意一棵非空树中:

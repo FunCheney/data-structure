@@ -33,6 +33,32 @@ public class PalindromeLinkedList {
             }
         }
         return true;
+    }
 
+    public boolean isPalindrome2(ListNode head) {
+        if(head == null || head.next == null){
+            return true;
+        }
+        ListNode next = head.next;
+        ListNode cur = head;
+        while (next != null && next.next != null){
+            next = next.next.next;
+            cur = cur.next;
+        }
+        ListNode newHead = cur;
+        newHead.next = null;
+        ListNode p = null;
+        while (cur != null){
+            ListNode insertNode = cur;
+            insertNode.next = p;
+            cur = cur.next;
+        }
+        p = cur;
+        while (p != null && head != null){
+            if(p.val != head.val){
+                return false;
+            }
+        }
+        return true;
     }
 }

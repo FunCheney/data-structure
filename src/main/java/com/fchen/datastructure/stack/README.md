@@ -87,5 +87,6 @@ public interface Stack<E> {
  ```
  
 ```
+ 使用数组来实现栈：
 
 
