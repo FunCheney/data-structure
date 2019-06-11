@@ -3,6 +3,42 @@
  
  &ensp;&ensp;栈上的INSERT操作称为**压栈**(PUSH),而DELETE操作称为**弹栈**(POP)。
  
+ 栈(接口)中包含的方法：
+ ```
+ public interface Stack<E> {
+     /**
+      *获取栈的大小
+      * @return
+      */
+     int getSize();
+ 
+     /**
+      * 判断是否为空
+      * @return
+      */
+     boolean isEmpty();
+ 
+     /**
+      * 压栈操作
+      * @param e
+      */
+     void push(E e);
+ 
+     /**
+      * 弹栈操作
+      * @return
+      */
+     E pop();
+ 
+     /**
+      * 获取栈顶的元素
+      * @return
+      */
+     E peek();
+ 
+ }
+ ```
+ 
  #### 使用数组实现栈
  &ensp;&ensp;可以使用一个数组S[1..n]来实现一个栈。该数组有一个属性S.top,指向插入的最新元素。栈中包含的元素为S[1..S.top],其中S[1]为栈低元素，S[S.top]为栈顶元素。
  
@@ -48,45 +84,8 @@ PEEK()
       retrun S[S.top]
 ```
 
-栈(接口)中包含的方法：
-```
-public interface Stack<E> {
-    /**
-     *获取栈的大小
-     * @return
-     */
-    int getSize();
 
-    /**
-     * 判断是否为空
-     * @return
-     */
-    boolean isEmpty();
-
-    /**
-     * 压栈操作
-     * @param e
-     */
-    void push(E e);
-
-    /**
-     * 弹栈操作
-     * @return
-     */
-    E pop();
-
-    /**
-     * 获取栈顶的元素
-     * @return
-     */
-    E peek();
-
-}
-```
- 使用数组来实现栈：
- ```
- 
-```
- 使用数组来实现栈：
+ #### 使用单链表来实现栈：
+ &ensp;&ensp;使用单链表的顶端插入实现push，通过删除链表的顶端元素实现pop。peek操作只是考察链表顶端元素并返回它的值。
 
 

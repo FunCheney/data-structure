@@ -108,4 +108,4 @@ NODE{
 [动态数组]:https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/array/README.md
 [链表]:https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/linkedlist/README.md
 [队列]:https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/queue/README.md
-[栈]:
+[栈]:https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/stack/README.md
