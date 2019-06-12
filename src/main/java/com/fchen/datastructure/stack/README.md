@@ -87,5 +87,12 @@ PEEK()
 
  #### 使用单链表来实现栈：
  &ensp;&ensp;使用单链表的顶端插入实现push，通过删除链表的顶端元素实现pop。peek操作只是考察链表顶端元素并返回它的值。
+ 
+ 
+#### [栈的应用]:
+#### [LeetCode 栈相关]:
 
 
+[栈的应用]:https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/stack/apply/README.md
+
+[LeetCode 栈相关]:https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/stack/leetcode/README.md
