@@ -162,11 +162,21 @@ ENQUEUE(Q, x)
  **循环队列的出队伪代码实现**：
 ```
 DEQUEUE(Q)
-       return cur
+    if(head == tail){
+        throw  new ArrayIndexOutOfBoundsException();
+    }
+    E ret = data[head];
+    // 计算新的队列头
+    front = (front + 1) % data.length;
+    size--;
+    return ret; 
 ```
- 
+ 下面显示循环队列动态出队过程：
+    <div align="center">
+       <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/queue/image/deloopqueue.gif">
+    </div>
  
  ### 4.双端队列
- &ensp;&ensp;双端队列限插入和删除操作在表的两端进行。
+ &ensp;&ensp;双端队列是指允许两端都可以进行入队和出队操作的队列，其元素的逻辑结构仍是线性结构。
  
  

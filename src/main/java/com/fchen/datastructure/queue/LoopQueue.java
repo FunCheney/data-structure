@@ -53,7 +53,6 @@ public class LoopQueue<E> implements Queue<E> {
             throw  new ArrayIndexOutOfBoundsException();
         }
         E ret = data[front];
-        data[front] = ret;
         front = (front + 1) % data.length;
         size--;
         if(size == getCapacity() / 4 && getCapacity() / 2 != 0){
