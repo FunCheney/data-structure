@@ -12,32 +12,42 @@ import java.util.Queue;
  * @Author by Fchen
  */
 public class MyStack {
-    Queue<Integer> queue;
-    Queue<Integer> queue1;
+    Queue<Integer> queueA;
+    Queue<Integer> queueB;
     /** Initialize your data structure here. */
     public MyStack() {
-        queue = new LinkedList<>();
-        queue1 = new LinkedList<>();
+        queueA = new LinkedList<>();
+        queueB = new LinkedList<>();
     }
 
     /** Push element x onto stack. */
     public void push(int x) {
-        queue.add(x);
+        if(queueA.isEmpty()){
+            queueA.add(x);
+            return;
+        }
+        queueB.add(x);
+        queueB.add(queueA.remove());
+
     }
 
     /** Removes the element on top of the stack and returns that element. */
     public int pop() {
+        if(!queueA.isEmpty()){
+            return queueA.remove();
+        }else{
+            return queueB.remove();
+        }
 
-       return 0;
     }
 
     /** Get the top element. */
     public int top() {
-        return queue.peek();
+        return queueA.isEmpty() ? queueB.peek() : queueA.peek();
     }
 
     /** Returns whether the stack is empty. */
     public boolean empty() {
-        return queue.isEmpty();
+        return queueA.isEmpty() ? queueB.isEmpty() : queueA.isEmpty();
     }
 }
