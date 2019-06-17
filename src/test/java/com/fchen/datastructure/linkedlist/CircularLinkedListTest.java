@@ -20,4 +20,14 @@ public class CircularLinkedListTest {
         list.addKey(2);
         log.info(list.toString());
     }
+
+    @Test
+    public void testSingleCircularList(){
+        SingleCircularLinkedList<Integer> list = new SingleCircularLinkedList<>();
+        log.info(list.toString());
+        list.add(1);
+        log.info(list.toString());
+        list.add(2);
+        log.info(list.toString());
+    }
 }
