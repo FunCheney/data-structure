@@ -29,5 +29,7 @@ public class CircularLinkedListTest {
         log.info(list.toString());
         list.add(2);
         log.info(list.toString());
+        list.addIndex(2,3);
+        log.info(list.toString());
     }
 }

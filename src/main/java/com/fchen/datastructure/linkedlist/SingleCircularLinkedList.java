@@ -55,7 +55,7 @@ public class SingleCircularLinkedList<E> {
      * @param key
      */
     public void addIndex(int index, E key){
-        if(index < 0 || index >= size){
+        if(index < 0 || index > size){
             throw new RuntimeException("index is Illegal");
         }
         Node insertNode = new Node(key);
