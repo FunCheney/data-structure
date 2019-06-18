@@ -67,6 +67,16 @@ public class SingleCircularLinkedList<E> {
         curNode.next = insertNode;
         size++;
     }
+
+    /**
+     * 再循环链表中每个一定的步长删除一个节点
+     * @param list
+     * @param step
+     * @return 删除的节点拼接而成的新链表
+     */
+    public Node josephusProblem(SingleCircularLinkedList list,int step){
+        return null;
+    }
     @Override
     public String toString(){
         StringBuilder sb = new StringBuilder();
