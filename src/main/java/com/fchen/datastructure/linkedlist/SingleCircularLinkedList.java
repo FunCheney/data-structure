@@ -22,7 +22,18 @@ public class SingleCircularLinkedList<E> {
         }
     }
 
-    private Node sentinel = new Node();
+    private Node sentinel;
+
+    private int size;
+
+    public SingleCircularLinkedList() {
+        sentinel = new Node(null,null);
+        size = 0;
+    }
+
+    public int getSize() {
+        return size;
+    }
 
     //添加节点
     public void add(E key){
@@ -35,8 +46,28 @@ public class SingleCircularLinkedList<E> {
             curNode.next = first;
             sentinel.next = curNode;
         }
+        size++;
     }
-    //遍历当前环形链表
+
+    /**
+     * 在某一索引的位置添加关键字为key的结点
+     * @param index
+     * @param key
+     */
+    public void addIndex(int index, E key){
+        if(index < 0 || index >= size){
+            throw new RuntimeException("index is Illegal");
+        }
+        Node insertNode = new Node(key);
+        Node curNode = sentinel;
+        for(int i = 0; i < index; i++){
+            curNode = curNode.next;
+        }
+        insertNode.next = curNode.next;
+        curNode.next = insertNode;
+        size++;
+    }
+    @Override
     public String toString(){
         StringBuilder sb = new StringBuilder();
         sb.append(sentinel.key);
