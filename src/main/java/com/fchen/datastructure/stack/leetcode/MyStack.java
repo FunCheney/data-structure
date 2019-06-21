@@ -24,11 +24,15 @@ public class MyStack {
     public void push(int x) {
         if(queueA.isEmpty()){
             queueA.add(x);
-            return;
+            while (!queueB.isEmpty()){
+                queueA.add(queueB.remove());
+            }
+        }else{
+            queueB.add(x);
+            while (!queueA.isEmpty()){
+                queueB.add(queueA.remove());
+            }
         }
-        queueB.add(x);
-        queueB.add(queueA.remove());
-
     }
 
     /** Removes the element on top of the stack and returns that element. */
