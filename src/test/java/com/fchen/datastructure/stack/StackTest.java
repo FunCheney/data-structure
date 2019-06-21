@@ -50,7 +50,7 @@ public class StackTest {
     @Test
     public void calculatorTest(){
         Calculator calculator = new Calculator();
-        String exp = "30+8*5/2";
+        String exp = "300+8*5/2+200/10";
         int cal = calculator.cal(exp.trim());
         log.info("中序表达式:{} = {}",exp,cal);
     }

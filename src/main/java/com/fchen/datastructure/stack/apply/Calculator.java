@@ -20,6 +20,7 @@ public class Calculator {
         Integer num1;
         Integer num2;
         Character c;
+        String strTemp = "";
         while (true){
             c = exp.substring(index, index + 1).charAt(0);
             //判断得到的当前字符是什么
@@ -44,7 +45,15 @@ public class Calculator {
                     opr.push(c);
                 }
             }else{
-                num.push(c - '0');
+                strTemp += c;
+                if((index + 1) < exp.length()){
+                    while ((index + 2) <= exp.length() && !isOpr(exp.substring(index + 1, index + 2).charAt(0))){
+                        strTemp += exp.substring(index + 1, index + 2);
+                        index++;
+                    }
+                }
+                num.push(Integer.parseInt(strTemp));
+                strTemp = "";
             }
             // index + 1, 并判断当前字符串是否遍历完成
             index++;
