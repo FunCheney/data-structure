@@ -1,5 +1,6 @@
 package com.fchen.datastructure.stack;
 
+import com.fchen.datastructure.stack.apply.Calculator;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
@@ -45,6 +46,15 @@ public class StackTest {
         double v = testStack(arrayStack, opt);
         log.info("ArrayStackTime is:{}",v);
     }
+
+    @Test
+    public void calculatorTest(){
+        Calculator calculator = new Calculator();
+        String exp = "30+8*5/2";
+        int cal = calculator.cal(exp.trim());
+        log.info("中序表达式:{} = {}",exp,cal);
+    }
+
 
     private double testStack(Stack<Integer> stack, int opt){
         Long startTime = System.nanoTime();

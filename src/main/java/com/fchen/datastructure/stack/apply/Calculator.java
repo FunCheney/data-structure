@@ -4,7 +4,7 @@ import com.fchen.datastructure.stack.ArrayStack;
 
 /**
  * @Classname Calculator
- * @Description  计算器
+ * @Description  计算器  中序表达式
  * @Date 2019/6/20 21:01
  * @Author by Fchen
  */
@@ -17,9 +17,9 @@ public class Calculator {
     public int cal(String exp){
         int result = 0;
         int index = 0;
-        int num1 = 0;
-        int num2 = 0;
-        char c = ' ';
+        Integer num1;
+        Integer num2;
+        Character c;
         while (true){
             c = exp.substring(index, index + 1).charAt(0);
             //判断得到的当前字符是什么
@@ -27,14 +27,17 @@ public class Calculator {
                 //是操作符
                 if(!opr.isEmpty()){
                     //符号栈有操作符
-                    if(priority(c) <= priority((int)opr.peek())){
+                    if(priority(c) <= priority((Character)opr.peek())){
                         //当前符号的优先级 小于 等于 符号栈栈顶的优先级
-                        num1 = (int)num.pop();
-                        num2 = (int)num.pop();
-                        result = cal(num1, num2, c);
+                        Character op = (Character) opr.pop();
+                        num1 = (Integer) num.pop();
+                        num2 = (Integer) num.pop();
+                        result = cal(num1, num2, op);
                         //运算结果入栈
                         num.push(result);
                         //当前的操作符入符号栈
+                        opr.push(c);
+                    }else{
                         opr.push(c);
                     }
                 }else {
@@ -53,10 +56,11 @@ public class Calculator {
             if(opr.isEmpty()){
                 break;
             }
-            num1 = (int)num.pop();
-            num2 = (int)num.pop();
-            c = (char)opr.pop();
+            num1 = (Integer) num.pop();
+            num2 = (Integer) num.pop();
+            c = (Character) opr.pop();
             result = cal(num1, num2, c);
+            num.push(result);
         }
         return result;
     }
@@ -65,7 +69,7 @@ public class Calculator {
      * 用来确定运算符的优先级
      * @return 返回数字越大优先级越高
      */
-    private int priority(int opr){
+    private int priority(char opr){
         if(opr == '*' || opr == '/'){
             return 1;
         }else if(opr == '+' || opr == '-'){
