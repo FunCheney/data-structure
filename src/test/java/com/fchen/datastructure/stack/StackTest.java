@@ -1,6 +1,7 @@
 package com.fchen.datastructure.stack;
 
 import com.fchen.datastructure.stack.apply.Calculator;
+import com.fchen.datastructure.stack.apply.ReversePolishNotationCal;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
@@ -67,5 +68,15 @@ public class StackTest {
         String exp = "300+8*5/2+200/10";
         int cal = calculator.cal(exp.trim());
         log.info("中序表达式:{} = {}",exp,cal);
+    }
+
+    @Test
+    public void reversePolishNotationCalTest(){
+        ReversePolishNotationCal calculator = new ReversePolishNotationCal();
+//        30*20+250/50*123
+//          30 20 * 250 50 / 123 +
+        String exp = "34+5*6-";
+        int cal = calculator.cal(exp.trim());
+        log.info("逆波兰序表达式:{} = {}",exp,cal);
     }
 }
