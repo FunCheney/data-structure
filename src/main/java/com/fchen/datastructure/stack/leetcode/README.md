@@ -65,7 +65,7 @@ public void push(int x) {
 
 示意图：
  <div align="center">
-    <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/linkedlist/image/circular.jpg">
+    <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/stack/image/stackpush.gif">
  </div>
      
 **2.pop元素**
