@@ -47,14 +47,6 @@ public class StackTest {
         log.info("ArrayStackTime is:{}",v);
     }
 
-    @Test
-    public void calculatorTest(){
-        Calculator calculator = new Calculator();
-        String exp = "300+8*5/2+200/10";
-        int cal = calculator.cal(exp.trim());
-        log.info("中序表达式:{} = {}",exp,cal);
-    }
-
 
     private double testStack(Stack<Integer> stack, int opt){
         Long startTime = System.nanoTime();
@@ -67,5 +59,13 @@ public class StackTest {
         }
         Long endTime = System.nanoTime();
         return (endTime - startTime) / 1000000000.0;
+    }
+
+    @Test
+    public void calculatorTest(){
+        Calculator calculator = new Calculator();
+        String exp = "300+8*5/2+200/10";
+        int cal = calculator.cal(exp.trim());
+        log.info("中序表达式:{} = {}",exp,cal);
     }
 }

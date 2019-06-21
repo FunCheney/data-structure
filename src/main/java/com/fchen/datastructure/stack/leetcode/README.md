@@ -16,11 +16,11 @@
 
 push元素动态示意图：
  <div align="center">
-    <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/linkedlist/image/sentinel.jpg">
+    <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/linkedlist/image/.jpg">
  </div>
 pop元素动态示意图:
  <div align="center">
-    <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/linkedlist/image/sentinel.jpg">
+    <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/linkedlist/image/.jpg">
  </div>
 
 
