@@ -79,4 +79,8 @@ public class StackTest {
         int cal = calculator.cal(exp.trim());
         log.info("逆波兰序表达式:{} = {}",exp,cal);
     }
+    @Test
+    public void toInfixExpressionListTest(){
+
+    }
 }
