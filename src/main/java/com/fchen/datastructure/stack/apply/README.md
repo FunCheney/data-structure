@@ -47,9 +47,12 @@
  8) 依次弹出中间结果栈中的元素并输出，结果的逆序就是中缀表达式对应的后缀表达式。 
  
  假设中缀表达式 a + b * c + (d * e +f) * g 转换为后缀表达式：a b c * + d e * f + g * +。
+ 
+ 
   <div align="center">
      <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/stack/image/infixTopostfix.gif">
   </div>
+  
  #### 4. 前缀表达式(波兰表达式)
  **前缀表达式的计算机求值**
  &ensp;&ensp;从右至左扫描表达式，遇到数字时，将数字压入栈，遇到运算符时，弹出栈顶的两个数，用运算符对它们做相应的计算，并将结果入栈；
