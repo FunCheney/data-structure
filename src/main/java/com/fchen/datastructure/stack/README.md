@@ -42,8 +42,6 @@
  #### 使用数组实现栈
  &ensp;&ensp;可以使用一个数组S[1..n]来实现一个栈。该数组有一个属性S.top,指向插入的最新元素。栈中包含的元素为S[1..S.top],其中S[1]为栈低元素，S[S.top]为栈顶元素。
  
- ![alt text](./linkedlist/data-mapper.png "Data Mapper")
- 
  &ensp;&ensp;当S.top = 0 时：栈中不包含任何元素，即栈是**空**(empty)的。通过STACK-EMPTY方法来判断一个栈是否为空。
  
  伪代码：

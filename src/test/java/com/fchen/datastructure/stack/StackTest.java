@@ -2,6 +2,7 @@ package com.fchen.datastructure.stack;
 
 import com.fchen.datastructure.stack.apply.Calculator;
 import com.fchen.datastructure.stack.apply.ReversePolishNotationCal;
+import com.fchen.datastructure.stack.apply.ToInfixExpressionList;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
@@ -81,6 +82,9 @@ public class StackTest {
     }
     @Test
     public void toInfixExpressionListTest(){
-
+        ToInfixExpressionList list = new ToInfixExpressionList();
+        String exp = "3 + 4 * 5 / 6";
+        String s = list.ToInfixExpressionList(exp);
+        log.info(s);
     }
 }
