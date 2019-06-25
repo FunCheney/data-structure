@@ -50,7 +50,7 @@
  
  
   <div align="center">
-     <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/stack/image/infixTopostfix.gif">
+     <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/stack/image/infixTopostfix1.gif">
   </div>
   
  #### 4. 前缀表达式(波兰表达式)
