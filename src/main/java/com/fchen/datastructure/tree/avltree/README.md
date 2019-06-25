@@ -1,2 +1,3 @@
- ### AVL树(Trie)
- ![alt text](./linkedlist/data-mapper.png "Data Mapper")
+ ## AVL树
+
+&ensp;&ensp;AVL树是每个结点的左子树和右字树的高度最多差1的二分搜索树。

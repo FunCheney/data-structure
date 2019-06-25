@@ -20,6 +20,7 @@
  &ensp;&ensp;它是一棵空树或它的左右两个子树的高度差的绝对值不超过1，并且左右两个子树都是一棵平衡二叉树。
  
  ### 2.1  AVL 树:
+  &ensp;&ensp;AVL(Adelson-Velskii 和 Landis)树是带有平衡条件(balance condition)的二分搜索树。
  
  ### 2.2  2-3 树:
  &ensp;&ensp; **2-结点**：标准二叉树中的结点称为2-结点（含有一个键和两条链接）。
