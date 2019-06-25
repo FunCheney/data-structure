@@ -6,6 +6,7 @@ import com.fchen.datastructure.stack.apply.ToInfixExpressionList;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -83,8 +84,15 @@ public class StackTest {
     @Test
     public void toInfixExpressionListTest(){
         ToInfixExpressionList list = new ToInfixExpressionList();
-        String exp = "3 + 4 * 5 / 6";
-        String s = list.ToInfixExpressionList(exp);
-        log.info(s);
+        String exp = "3+4*5/6";
+        List<String> strings = list.ToInfixExpressionList(exp);
+        StringBuilder sb = new StringBuilder();
+        for (String s: strings) {
+            sb.append(s);
+            if(sb.length() > 0){
+                sb.append(" ");
+            }
+        }
+        System.out.println(sb.toString());
     }
 }

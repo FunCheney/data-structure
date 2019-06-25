@@ -14,7 +14,7 @@ import java.util.Stack;
  */
 @Slf4j
 public class ToInfixExpressionList {
-    public String ToInfixExpressionList(String s){
+    public List<String> ToInfixExpressionList(String s){
         List<String> ls = new ArrayList<>();
         //用于遍历中缀表达式字符串
         int i = 0;
@@ -37,12 +37,9 @@ public class ToInfixExpressionList {
                 ls.add("" + c);
             }
         }while ( i < s.length());
+        System.out.println(ls);
         List<String> strings = parseSuffixExpreList(ls);
-        StringBuilder res = new StringBuilder();
-        for (String o: strings) {
-            res.append(o);
-        }
-        return res.toString();
+        return strings;
     }
 
     private List<String> parseSuffixExpreList(List<String> ls){
@@ -60,7 +57,7 @@ public class ToInfixExpressionList {
                 s1.push(str);
             }else if(str.equals(")")){
                 //如果是）,则依次弹出s1栈顶的元素，并压入s2，知道遇到左括号为止
-                while (s1.peek().equals("(")){
+                while (!s1.peek().equals("(")){
                     s2.add(s1.pop());
                 }
                 //将“(”弹出s1栈
@@ -82,17 +79,24 @@ public class ToInfixExpressionList {
     }
 
     private int priority(String opr){
+        int result = 0;
         switch (opr){
             case "+":
-                return 1;
+                result = 1;
+                break;
+
             case "-":
-                return 1;
+                result = 1;
+                break;
             case "*":
-                return 2;
+                result = 1;
+                break;
             case "/":
-                return 2;
+                result = 1;
+                break;
                 default:
-                    return -1;
+                    break;
         }
+        return result;
     }
 }
