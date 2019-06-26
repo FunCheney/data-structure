@@ -18,6 +18,10 @@ public class JosephusProblem {
         list.add(1);
         list.add(2);
         list.addIndex(2,3);
-        list.josephusProblem(list,2);
+        list.add(4);
+        list.add(5);
+        int i = list.josephusProblem(list, 1, 2);
+        System.out.println(i);
+
     }
 }

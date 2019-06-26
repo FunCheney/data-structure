@@ -247,6 +247,9 @@ LIST-DELETE(NODE node)
  
  #### 3.4 (循环)链表的删除
  
+ ### 4 应用
+ **1. 约瑟夫问题：**  (有哨兵的单向循环链表(circular，single linked list with a sentinel)为例)
+ 
 
 [单向链表Api Java实现]:
 
