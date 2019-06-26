@@ -1,16 +1,43 @@
  ### 二分搜索树
  &ensp;&ensp;二分搜索树（BST）是一棵二叉树，其中每个结点都含有一个Comparable的键(以及相关联的值)且每个结点的键都大于其左字树中的任意
  结点的键而小于右子树中任意结点的键。
-#### 1.二分搜索树的遍历
+#### 1.二分搜索树的构造
+##### 1.1 二分搜索树的结点
+&ensp;&ensp;一个二分搜索树最多有两个结点，所以我们可以保存直接链接到他们的链。树结点的声明在结构上类似于双链表的声明，二分搜索树结点的声明如下：
+```
+public class Node<E extends Comparable<E>>{
+    public E e;
+    /**
+     * 左节点
+     */
+    public Node left;
+    /**
+     * 右节点
+     */
+    public Node right;
+
+    public Node(E e) {
+        this.e = e;
+        this.left = null;
+        this.right = null;
+    }
+}
+```
+
+<div align="center">
+     <img src="">
+  </div>
+  
+#### 2.二分搜索树的遍历
 * 1.前序遍历(preorder tree walk)
 
-   &ensp;&ensp;输出的根关键字在其左右子树的关键字之前。
+   &ensp;&ensp;输出的根关键字在其左右子树的关键字之前。先输出父结点，在输出左子树和右子树
 * 2.中序遍历(inorder tree walk)
 
-   &ensp;&ensp;输出的根关键字在其左右子树的关键字值之间。（按照顺序输出二叉搜索树中的所有元素）
+   &ensp;&ensp;输出的根关键字在其左右子树的关键字值之间。（按照顺序输出二叉搜索树中的所有元素）先左子树，在输出父结点，最后输出右子树。
 * 3.后序遍历(postorder tree walk)
 
-   &ensp;&ensp;输出的根关键字在其左右子树的关键字值之后。
+   &ensp;&ensp;输出的根关键字在其左右子树的关键字值之后。先输出左子树，再输出右子树，最后输出父结点。
 
 * 4.层序遍历(广度优先)
 

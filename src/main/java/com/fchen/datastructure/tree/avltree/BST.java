@@ -2,7 +2,7 @@ package com.fchen.datastructure.tree.avltree;
 
 /**
  * @Classname BST
- * @Description TODO
+ * @Description 二分搜索树
  * @Date 2019/5/13 7:32
  * @Author by Chen
  */
