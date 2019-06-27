@@ -94,7 +94,7 @@ public class SingleCircularLinkedList<E> {
         }
         //删除距离当前结点 step - 1 位置的结点，直到链表中只有一个结点
         while (true){
-            if(curNode.next.equals(helper)){
+            if(curNode.next == helper){
                 break;
             }
             for(int j = 0; j < step - 1; j++){
@@ -106,9 +106,10 @@ public class SingleCircularLinkedList<E> {
             curNode = curNode.next;
             //删除
             helper.next = curNode;
+            System.out.println("删除当前结点后的链表为："+list);
 
         }
-        return (Integer) curNode.key;
+        return (Integer) helper.key;
     }
     @Override
     public String toString(){
@@ -122,7 +123,7 @@ public class SingleCircularLinkedList<E> {
             sb.append("-->").append(curNode.key);
             curNode = curNode.next;
         }
-        sb.append(sentinel.key);
+        sb.append("-->").append(sentinel.key);
         return sb.toString();
     }
 
