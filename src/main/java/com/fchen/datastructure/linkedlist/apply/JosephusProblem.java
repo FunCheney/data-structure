@@ -20,8 +20,9 @@ public class JosephusProblem {
         list.addIndex(2,3);
         list.add(4);
         list.add(5);
+        System.out.println("循环链表为："+list);
         int i = list.josephusProblem(list, 1, 2);
-        System.out.println(i);
+        System.out.println("最后剩余结点的关键字："+i);
 
     }
 }
