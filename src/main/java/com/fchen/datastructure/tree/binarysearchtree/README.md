@@ -25,7 +25,7 @@ public class Node<E extends Comparable<E>>{
 ```
 
 <div align="center">
-     <img src="">
+     <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/node.jpg">
   </div>
   
 #### 2.二分搜索树的遍历
