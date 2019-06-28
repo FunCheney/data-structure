@@ -28,6 +28,11 @@ public class Node<E extends Comparable<E>>{
      <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/node.jpg">
   </div>
   
+##### 1.2 二分搜索树添加结点
+
+  
+##### 1.3 二分搜索树删除结点
+  
 #### 2.二分搜索树的遍历
 * 1.前序遍历(preorder tree walk)
 
