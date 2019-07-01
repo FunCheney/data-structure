@@ -29,14 +29,24 @@ public class Node<E extends Comparable<E>>{
   </div>
   
 ##### 1.2 二分搜索树添加结点
-
+ &ensp;&ensp;将一个结点插入二分搜索树。调用如下过程即可完成：
+ 伪代码如下：
+ ```
+ INSERT(Node,e)
+     while(Node != null){
+         //
+         Node = new Node(e)
+     }
+```
+其中Node 为该树的根结点，e为要插入的元素
   
 ##### 1.3 二分搜索树删除结点
   
 #### 2.二分搜索树的遍历
 * 1.前序遍历(preorder tree walk)
 
-   &ensp;&ensp;输出的根关键字在其左右子树的关键字之前。先输出父结点，在输出左子树和右子树
+   &ensp;&ensp;输出的根关键字在其左右子树的关键字之前。先输出父结点，在输出左子树和右子树。
+   
 * 2.中序遍历(inorder tree walk)
 
    &ensp;&ensp;输出的根关键字在其左右子树的关键字值之间。（按照顺序输出二叉搜索树中的所有元素）先左子树，在输出父结点，最后输出右子树。
