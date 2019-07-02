@@ -11,12 +11,13 @@ public class Queens {
     private int queenNum = 8;
     //用来存放皇后最终的位置
     private int[] arr = new int[queenNum];
-
+    static int count = 0;
     //输出一种解法
     private void print(){
         for(int i = 0; i < arr.length; i++){
-            System.out.print(arr[i] + "");
+            System.out.print(arr[i] + " ");
         }
+        count++;
         System.out.println();
     }
 
@@ -54,5 +55,11 @@ public class Queens {
             }
         }
         return true;
+    }
+
+    public static void main(String[] args) {
+        Queens queens = new Queens();
+        queens.check(0);
+        System.out.println("共有"+count+"解法");
     }
 }
