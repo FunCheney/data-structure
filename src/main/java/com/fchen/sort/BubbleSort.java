@@ -11,16 +11,22 @@ public class BubbleSort {
     private int[] sort(int[] arr){
         //用来交换数据
         int temp = 0;
+        boolean flag = false;
         for(int j = 0; j < arr.length - 1; j++){
             for(int i = 0; i < arr.length - 1 - j; i++){
                 if(arr[i] > arr[i + 1]){
+                    flag = true;
                     temp = arr[i];
                     arr[i] = arr[i + 1];
                     arr[i + 1] = temp;
                 }
             }
+            if (!flag){
+                break;
+            }else {
+                flag = false;
+            }
         }
-
-        return null;
+        return arr;
     }
 }
