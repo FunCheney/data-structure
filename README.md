@@ -77,4 +77,4 @@ NODE{
 [队列]:https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/queue/README.md
 [栈]:https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/stack/README.md
 [二叉树]:https://github.com/FunCheney/data-structure/tree/master/src/main/java/com/fchen/datastructure/tree#1-二叉树
-[平衡树]https://github.com/FunCheney/data-structure/tree/master/src/main/java/com/fchen/datastructure/tree#2-平衡树
+[平衡树]:https://github.com/FunCheney/data-structure/tree/master/src/main/java/com/fchen/datastructure/tree#2-平衡树
