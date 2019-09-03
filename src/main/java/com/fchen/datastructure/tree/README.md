@@ -36,7 +36,7 @@
  **示意图:**
  
   <div align="center">
-     <img src=" https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/2-3-tree.jpg">
+     <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/2-3-tree.jpg">
   </div>
 
  ### 2.3 红黑树
