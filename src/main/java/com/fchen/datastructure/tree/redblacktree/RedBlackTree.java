@@ -1,4 +1,4 @@
-package com.fchen.datastructure.tree.redblackTree;
+package com.fchen.datastructure.tree.redblacktree;
 
 /**
  * @Classname RedBlackTree

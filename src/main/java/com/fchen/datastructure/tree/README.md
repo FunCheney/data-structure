@@ -33,5 +33,11 @@
  * 3-结点，含有两个键（及其对应的值）和三条链接，左链接指向的2-3树中的键都小于该结点，中链接指向的2-3树中的键都位于该结点的
  两个键之间，右链接指向的2-3树中的键都大于该结点。
  
+ **示意图:**
+ 
+  <div align="center">
+     <img src=" https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/2-3-tree.jpg">
+  </div>
+
  ### 2.3 红黑树
  
