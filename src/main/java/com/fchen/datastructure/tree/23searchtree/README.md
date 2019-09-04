@@ -2,7 +2,8 @@
  
  一棵完美平衡的2-3查找树中所有空链接到根节点的距离应该都是相同的。
  
- 
+ ![image](https:https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/2-3tree_0.jpg "2-3-Search-Tree")
+
  
  ### 查找
  &ensp;&ensp;2-3 查找树中的查找与二分搜索树的查找类似。要判断一个键是否在树中，先将它和根结点中的键比较。如果它和其中任意一个
