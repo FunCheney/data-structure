@@ -2,7 +2,7 @@
  
  一棵完美平衡的2-3查找树中所有空链接到根节点的距离应该都是相同的。
  
- ![image](https:https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/2-3tree_0.jpg "2-3-Search-Tree")
+ ![image](https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/2-3tree_0.jpg "2-3-Search-Tree")
 
  
  ### 查找
