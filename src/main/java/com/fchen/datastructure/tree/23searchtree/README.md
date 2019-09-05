@@ -2,17 +2,23 @@
  
  一棵完美平衡的2-3查找树中所有空链接到根节点的距离应该都是相同的。
  
- ![image](https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/2-3tree_0.jpg "2-3-Search-Tree")
-
+ <div align="center">
+     <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/2-3searchTree_0.gif">
+</div>
  
  ### 查找
  &ensp;&ensp;2-3 查找树中的查找与二分搜索树的查找类似。要判断一个键是否在树中，先将它和根结点中的键比较。如果它和其中任意一个
  相等，查找命中。否则，根据比较的结果找到指向相应区间的链接，并在其指向的子树中递归继续查找。如果是个空链接，查找未命中。
  
  在如上图所示的2-3树中查找键为2的结点是否存在，过程如下：
+  <div align="center">
+      <img src=https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/2-3searchTree_1.gif">
+ </div>
  
  在如上图所示的2-3树中查找键为17的结点是否存在，过程如下：
- 
+  <div align="center">
+      <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/2-3searchTree_2.gif">
+ </div>
  
  
  ### 插入
@@ -23,6 +29,11 @@
  &ensp;&ensp;如果未命中的查找结束于一个**2-结点**，就将这个**2-结点**替换为**3-结点**，将要插入的键保存在其中即可。
  
  &ensp;&ensp;如果未命中的查找结束于一个**3-结点**，分析过程如下。
+ 
+   <div align="center">
+       <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/2-3searchTree_insert_1.gif">
+  </div>
+ 
  #### 向一棵只含有一个3-结点的树中插入新键
  &ensp;&ensp;在考虑一般情况之前，先假设我们需要向一棵只含有一个3-结点的树中插入一个新键。这棵树中有两个键，所以在它唯一的结点中
  已经没有可插入新键的空间了。为了将新键插入，先临时将新键存入该结点中，形成一个**4-结点**(含有3个键和4条连接)。创建一个**4-结点**很方便，
@@ -30,6 +41,9 @@
  一个结点含有3个键中的最大者(和根结点的右链接相连)。这棵树即是一棵含有3个结点的二叉查找树，同时也是一棵完美平衡的2-3树，因为其中所有的
  空链接到跟结点的距离都相等。插入前树的高度是0，插入后树的高度是1。
  
+   <div align="center">
+       <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/2-3searchTree_insert_2.gif">
+  </div>
  
  #### 向一个父结点为2-结点的3-结点中插入新键
  &ensp;&ensp;假设未命中的查找结束于一个**3-结点**，而它的父结点是一个**2-结点**。在这种情况下需要*在维持树的完美平衡的前提下为新键
@@ -41,13 +55,17 @@
  
  上述过程是2-3树动态变化的核心，图示展示如下：
  
- 
+   <div align="center">
+       <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/2-3searchTree_insert_3.gif">
+  </div>
  #### 向一个父结点为3-结点的3-结点中插入新键
  &ensp;&ensp;假设未命中查找结束于一个父结点为**3-结点**的3-结点。依旧需要构造一个临时的**4-结点**并分解它，然后将它的中键插入它的父结点中。由于父结点也是一个**3-结点**，插入中间后又形成一个新的临时**4-结点**，然后在这个节点上进行相同的变换，集分解这个父结点并将它的中键插入的它的父结点中去。推广到一般的情况，就是这样一直向上不断分解临时的**4-结点**并将中键插到更高层的父结点，直到遇到一个**2-结点**并将它替换为一个不需要继续分解的**3-结点**，或者是到达**3-结点**的根。
  
  图示过程如下：
  
- 
+   <div align="center">
+       <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/2-3searchTree_insert_4.gif">
+  </div>
  
   #### 分解根结点
   &ensp;&ensp;如果从插入节点到根结点的路径上都是**3-结点**，根结点最终变成一个临时的**4-结点**。此时可以按照向一棵只有一个*3-结点**的树中插入新键的方法处理这个问题。将临时的**4-结点**分解为三个**2-结点**，树高加1。这次最后的变化仍然保持了树的完美平衡性，因为它变换的是根结点。
