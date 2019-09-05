@@ -85,7 +85,46 @@
   * 3.父节点为**3-节点**的左子节点、中间的子结点或右子结点
   
   
-  下面我们来详细看一下在**2-3树**中出现上述的位置时如何分解
+  下面我们来详细看一下在**2-3树**中出现上述的位置时如何分解。
+  
+  情形：
+  
+  当临时的**4-节点**出现在根节点：
+  
+ <div align="center">
+     <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/2-3searchTree_4_0.gif">
+</div>
+  
+  
+  当临时的**4-节点**出现在**2-结点**的左侧：
+  
+   <div align="center">
+       <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/2-3searchTree_4_1.gif">
+  </div>
+  
+  当临时的**4-节点**出现在**2-结点**的右侧：
+  
+   <div align="center">
+       <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/2-3searchTree_4_2.gif">
+  </div>
+  
+  当临时的**4-节点**出现在**3-结点**的左侧：
+  
+   <div align="center">
+       <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/2-3searchTree_4_3.gif">
+  </div>
+  
+  当临时的**4-节点**出现在**3-结点**的中间：
+  
+   <div align="center">
+       <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/2-3searchTree_4_4.gif">
+  </div>
+  
+  当临时的**4-节点**出现在**3-结点**的右侧：
+  
+   <div align="center">
+       <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/2-3searchTree_4_5.gif">
+  </div>
   
   
   上述的情况中，在变化的过程中，只有当根节点最后为临时的**4-节点**，此时被分解成为3个**2-结点**时，整个树的高度才会增加1。除此之外，插入一个结点**2-3**树的高度还是原来的高度。上述的变化过程中：**任何空链接到根节点的路径长度都是相等的。**
