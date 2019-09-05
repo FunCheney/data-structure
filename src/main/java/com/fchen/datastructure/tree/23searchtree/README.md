@@ -13,7 +13,7 @@
  在如上图所示的2-3树中查找键为2的结点是否存在，过程如下：
  
   <div align="center">
-      <img src=https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/2-3searchTree_1.gif">
+      <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/2-3searchTree_1.gif">
  </div>
  
  在如上图所示的2-3树中查找键为17的结点是否存在，过程如下：
