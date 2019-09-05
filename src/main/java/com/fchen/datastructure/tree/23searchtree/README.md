@@ -11,11 +11,13 @@
  相等，查找命中。否则，根据比较的结果找到指向相应区间的链接，并在其指向的子树中递归继续查找。如果是个空链接，查找未命中。
  
  在如上图所示的2-3树中查找键为2的结点是否存在，过程如下：
+ 
   <div align="center">
       <img src=https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/2-3searchTree_1.gif">
  </div>
  
  在如上图所示的2-3树中查找键为17的结点是否存在，过程如下：
+ 
   <div align="center">
       <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/2-3searchTree_2.gif">
  </div>
