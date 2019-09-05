@@ -31,8 +31,8 @@
  &ensp;&ensp;如果未命中的查找结束于一个**3-结点**，分析过程如下。
  
    <div align="center">
-       <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/2-3searchTree_insert_1.gif">
-  </div>
+          <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/2-3searchTree_insert_1.gif">
+   </div>
  
  #### 向一棵只含有一个3-结点的树中插入新键
  &ensp;&ensp;在考虑一般情况之前，先假设我们需要向一棵只含有一个3-结点的树中插入一个新键。这棵树中有两个键，所以在它唯一的结点中
