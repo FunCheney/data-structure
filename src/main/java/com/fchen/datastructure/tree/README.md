@@ -63,7 +63,10 @@
   
 &ensp;&ensp; 3. 该树是**完美平衡**的，即任意空链接到根结点的路径上黑链接的数量相同；
  
- 
+  [2-3 红黑树的操作]
+  
+  
+  
  
  [2-3 树的操作]:https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/23searchtree/README.md
  
