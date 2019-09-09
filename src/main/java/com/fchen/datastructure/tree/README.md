@@ -51,8 +51,7 @@
  &ensp;&ensp;将2-3树中的**3-结点**拆分成2个**2-结点**，并将这两个**2-结点**的左节点使用红色的链接，右连接使用黑色链接，连在一起。如下图：
  
  <div align="center">
-      <img src=" https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/rbTree_0.jpg
-">
+      <img src=" https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/rbTree_0.jpg">
   </div>
  
  这样一来，就的到了红黑树的基本思想：
