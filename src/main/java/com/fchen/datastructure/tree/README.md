@@ -51,10 +51,10 @@
  &ensp;&ensp;将2-3树中的**3-结点**拆分成2个**2-结点**，并将这两个**2-结点**的左节点使用红色的链接，右连接使用黑色链接，连在一起。如下图：
  
  <div align="center">
-      <img src=" https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/rbTree_0.jpg">
+      <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/rbTree_0.jpg">
   </div>
  
- 这样一来，就的到了红黑树的基本思想：
+ 这样一来，就得到了构造红黑树的基本思想：
  
  &ensp;&ensp;**用标准的二分搜索树(完全由2-结点构成)和一些额外的信息(替换3-节点)来表示2-3树**。
  
