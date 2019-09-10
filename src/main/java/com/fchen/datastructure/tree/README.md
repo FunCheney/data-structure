@@ -89,9 +89,7 @@
  
  &ensp;&ensp;从某个结点出发(不含该结点)到达一个叶子结点的任意一条简单路径上的黑色链接(结点)的个数。
  
- 红黑树的操作
- 
- 
+  [红黑树的操作]
  
  [红黑树的操作]:https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/redblacktree/README.md
  
