@@ -77,19 +77,27 @@
  
  如下图所示：
  
- 
+ <div align="center">
+       <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/rbTree_1.jpg">
+   </div>
  
  #### 红黑树中颜色替换
  &ensp;&ensp;为了方便表示红黑树，间红黑树中链接的颜色表示在该链接所连接的结点中，我们都知道，一条链接的两端，有两个结点(父子结点)，将连接的颜色保存在子节点中。做颜色替换后，红黑树的示意图如下：
  
- 
+  <div align="center">
+        <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/rbTree_2.jpg">
+    </div>
  上面图片左侧的部分，在链接的旁边都有一个数字，这个数字称为：**黑高。**
  
  黑高(black-height)定义：
  
  &ensp;&ensp;从某个结点出发(不含该结点)到达一个叶子结点的任意一条简单路径上的黑色链接(结点)的个数。
  
-  [红黑树的操作]
+ &ensp;&ensp;通过上述的黑高定义，及红黑树的平衡性可以知道红黑树的**黑高**就是**根结点的黑高**。
+ 
+ 
+ 
+ [红黑树的操作]
  
  [红黑树的操作]:https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/redblacktree/README.md
  
