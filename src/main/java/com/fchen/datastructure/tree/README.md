@@ -88,9 +88,9 @@
         <img src="https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/tree/image/rbTree_2.jpg">
     </div>
 
-上面图片左侧的部分，在链接的旁边都有一个数字，这个数字称为：**黑高。**
+上面图片左侧的部分，在链接的旁边都有一个数字，这个数字称为：**黑高**。
  
- 黑高(black-height)定义：
+ **黑高(black-height)定义**：
  
  &ensp;&ensp; 从某个结点出发(不含该结点)到达一个叶子结点的任意一条简单路径上的黑色链接(结点)的个数。
  
