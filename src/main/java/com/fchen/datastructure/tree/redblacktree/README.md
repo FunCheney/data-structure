@@ -201,7 +201,40 @@ private void flipColors(Node node){
 
 **红黑树的插入代码实现**：
 ```
+private Node add(Node node,K key, V value){
+    if(node == null){
+        size++;
+        //默认插入红色节点
+        return new Node(key,value);
+    }
+    if(key.compareTo(node.key) < 0){
+        node.left = add(node.left,key,value);
+    }else if(key.compareTo(node.key) > 0){
+        node.right = add(node.right,key,value);
+    }else{
+        node.value = value;
+    }
+    if(isRed(node.right) && !isRed(node.left)){
+        node = leftRotate(node);
+    }
+    if(isRed(node.left) && isRed(node.left.left)){
+        node = rightRotate(node);
+    }
+    if(isRed(node.left) && isRed(node.right)){
+        flipColors(node);
+    }
+    return node;
+}
+```
+&ensp;&ensp;上述代码中的isRed()方法用来判断结点的颜色。
 
+```
+private boolean isRed(Node node){
+    if(node == null){
+        return BLACK;
+    }
+    return node.color;
+}
 ```
 
 ##### 删除
