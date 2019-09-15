@@ -201,6 +201,12 @@ private void flipColors(Node node){
 
 **红黑树的插入代码实现**：
 ```
+public void add(K key, V value){
+     root = add(root, key, value);
+     root.color = BLACK;
+ }
+```
+```
 private Node add(Node node,K key, V value){
     if(node == null){
         size++;
