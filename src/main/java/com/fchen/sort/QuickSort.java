@@ -1,5 +1,7 @@
 package com.fchen.sort;
 
+import java.util.Arrays;
+
 /**
  * @Classname QuickSort
  * @Description 快速排序
@@ -8,21 +10,23 @@ package com.fchen.sort;
  */
 public class QuickSort {
     public static void main(String[] args) {
-
+        int[] arr = {8,4,6,5,7,3,2,1};
+        quickSort(arr,0,arr.length - 1);
+        System.out.println("排序后："+ Arrays.toString(arr));
     }
 
     public static void quickSort(int[] arr,int left, int right){
         int l = left;
         int r = right;
-        int mid = arr[(left + right) / 2];
+        int mid = (left + right) / 2;
         int temp = 0;
         // while循环是让比mid 小的数放到左边，比mid大的数放在右边
         while (l < r){
-            while (arr[l] < mid){
-                l += l;
+            while (arr[l] < arr[mid]){
+                l++;
             }
-            while (arr[r] > mid){
-                r -= 1;
+            while (arr[r] > arr[mid]){
+                r--;
             }
             // l >= r 说明mid左右两边的值，已经按照左边小于mid值，右边大于等于mid值
             if(l >= r){
@@ -33,11 +37,11 @@ public class QuickSort {
             arr[l] = arr[r];
             arr[r] = temp;
 
-            // 交换后 arr[l] == mid相等 r--
-            if(arr[l] == mid){
+            // 交换后 arr[l] == arr[mid]相等 r--
+            if(arr[l] == arr[mid]){
                 r--;
             }
-            if(arr[r] == mid){
+            if(arr[r] == arr[mid]){
                 l++;
             }
         }
@@ -52,6 +56,5 @@ public class QuickSort {
         if(right > l){
             quickSort(arr,l,right);
         }
-
     }
 }
