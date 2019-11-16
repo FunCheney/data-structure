@@ -25,6 +25,12 @@
  &ensp;&ensp;在申明数组的时，需要指定数组的名称和它包含的类型，在创建数组时，需要指定数组的长度。指定数组的长度后，若改长度不可改变，
  这就一意味着，改数组中不能存放更多的元素。因此，我们需要动态的更新数组容量的大小。
  
+##### 1.1.2 有序数组
+&ensp;&ensp;有序数组是一种特殊的数组，其中的数据是按照关键字的升序（或降序）排列的，这种排列使得快速查找数据项可以较快速的实现，使用**二分查找**。
+
+
+&ensp;&ensp;&ensp;&ensp;[二分查找]
+ 
 #### 1.2 [链表]
  &ensp;&ensp;**定义**: 链表是一种递归的数据结构，它或者为空(null),或者指向一个结点(node)的引用,该结点含有一个泛型的元素和一个指向另一结点的引用。
 
@@ -64,9 +70,9 @@ NODE{
   
 ### 3. 集合
 
-### 3. 散列表
+### 4. 散列表
 
-### 4. 图结构
+### 5. 图结构
 
 
 
@@ -78,3 +84,7 @@ NODE{
 [栈]:https://github.com/FunCheney/data-structure/blob/master/src/main/java/com/fchen/datastructure/stack/README.md
 [二叉树]:https://github.com/FunCheney/data-structure/tree/master/src/main/java/com/fchen/datastructure/tree#1-二叉树
 [平衡树]:https://github.com/FunCheney/data-structure/tree/master/src/main/java/com/fchen/datastructure/tree#2-平衡树
+
+
+
+[二分查找]
