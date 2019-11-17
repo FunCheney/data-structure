@@ -2,6 +2,7 @@ package com.fchen.datastructure.Array;
 
 import com.fchen.datastructure.array.Array;
 import lombok.extern.slf4j.Slf4j;
+import lombok.val;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -16,13 +17,12 @@ import java.util.ArrayList;
 public class ArrayTest {
     @Test
     public void testArray(){
-        Array<Integer> array = new Array<>();
+        Array<Integer> array = new Array<>(20);
         String arrStr[] = {"1","2"};
         Array<String> arr = new Array<>(arrStr);
         for (int i = 0; i < 10; i++){
             array.addLast(i);
         }
-
         log.info(array.toString());
         array.addLast(100);
         log.info(array.toString());
