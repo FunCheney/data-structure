@@ -5,7 +5,7 @@ package com.fchen.datastructure.array.leetcode;
  * @date: 2019-11-18 08:05
  * @desc: leetCode 第27题题解
  */
-public class leetcode_27 {
+public class LeetCode_27 {
     public int removeElement(int[] nums, int val) {
         int count = 0;
         boolean flag = false;
