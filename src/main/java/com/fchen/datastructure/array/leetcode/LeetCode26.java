@@ -5,5 +5,5 @@ package com.fchen.datastructure.array.leetcode;
  * @date: 2019-11-18 23:51
  * @desc:
  */
-public class LeetCode_26 {
+public class LeetCode26 {
 }
