@@ -7,15 +7,13 @@ package com.fchen.datastructure.array.leetcode;
  */
 public class LeetCode27 {
     public int removeElement(int[] nums, int val) {
-        int count = 0;
-        boolean flag = false;
-        for(int i = 0; i < nums.length - 1;i++){
-            if(nums[i] == val){
-                flag = true;
-                continue;
+        int i = 0;
+        for(int j = 0; j < nums.length; j++){
+            if(val != nums[j]){
+                nums[i] = nums[j];
+                i++;
             }
-            count++;
         }
-        return flag ? count ++ : count;
+        return i;
     }
 }
