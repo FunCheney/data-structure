@@ -13,7 +13,8 @@ public class LeetCode66 {
             if(digits[i] % 10 != 0){
                 return digits;
             }
+            digits[i] = 0;
         }
-        return null;
+        return digits;
     }
 }
