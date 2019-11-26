@@ -22,6 +22,7 @@ public class BubbleSort {
                 }
             }
             if (!flag){
+                //没有交换数据，说明已经排好序，退出
                 break;
             }else {
                 flag = false;
