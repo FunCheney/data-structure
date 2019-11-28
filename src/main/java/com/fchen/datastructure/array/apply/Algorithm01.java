@@ -1,5 +1,9 @@
 package com.fchen.datastructure.array.apply;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 /**
  * @author: Fchen
  * @date: 2019-11-27 08:26
@@ -7,28 +11,39 @@ package com.fchen.datastructure.array.apply;
  *        暴力求解（枚举）
  */
 public class Algorithm01 {
-    int[] num = {1,2,3,4,5};
-    int size = num.length;
-    int sum = 10;
-    public void getSum(int[] nums,int sum) {
+    static int[] num = {1,2,3,4,5};
+    static int size = num.length;
+    static int sum = 10;
 
+    public static void main(String[] args) {
+        boolean[] flag = new boolean[size];
+        enumNumber(flag,0,0);
     }
 
-    public void EnumNumber(boolean[] flag, int i, int has){
+
+
+    public static void enumNumber(boolean[] flag, int i, int has){
         if(i >= size){
             return;
         }
         if(has + num[i] == sum){
             flag[i] = true;
-            print(i);
+            print(flag);
+            flag[i] = false;
         }
+        flag[i] = true;
+        enumNumber(flag, i + 1, has + num[i]);
+        flag[i] = false;
+        enumNumber(flag, i + 1, has);
     }
 
-    private void print(int i){
+    private static void print(boolean[] flag) {
         System.out.print("[ ");
-        for (int j = 0; j <= i;j++)
-            System.out.print(num[i] + " ");
-
-        System.out.println(" ]");
+        for (int j = 0; j < flag.length; j++){
+            if (flag[j]) {
+                System.out.print(num[j] + " ");
+            }
+        }
+        System.out.println("]");
     }
 }
