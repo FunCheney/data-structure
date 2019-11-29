@@ -8,7 +8,7 @@ package com.fchen.sort;
  */
 public class ShellSort {
 
-    private int[] sort(int[] arr){
+    public int[] sort(int[] arr){
         int temp = 0;
         for(int step = arr.length / 2; step > 0; step = arr.length / 2){
             for (int i = step; i < arr.length; i++){
