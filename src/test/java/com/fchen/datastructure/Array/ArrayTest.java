@@ -43,9 +43,9 @@ public class ArrayTest {
     }
     @Test
     public void test(){
-        int[] arr = {1,1,1,1,2,2,2,2};
-        Algorithm06 algorithm06 = new Algorithm06();
-        int[] prefect = algorithm06.prefect(arr, 4);
-        System.out.println(Arrays.toString(prefect));
+//        int[] arr = {1,1,1,1,2,2,2,2};
+//        Algorithm06 algorithm06 = new Algorithm06();
+//        int[] prefect = algorithm06.prefect(arr, 4);
+//        System.out.println(Arrays.toString(prefect));
     }
 }
