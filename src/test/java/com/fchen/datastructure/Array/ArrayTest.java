@@ -1,11 +1,13 @@
 package com.fchen.datastructure.Array;
 
 import com.fchen.datastructure.array.Array;
+import com.fchen.datastructure.array.apply.Algorithm06;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * @Classname ArrayTest
@@ -38,5 +40,12 @@ public class ArrayTest {
         log.info(array.toString());
         array.removeFirst();
         log.info(array.toString());
+    }
+    @Test
+    public void test(){
+        int[] arr = {1,1,1,1,2,2,2,2};
+        Algorithm06 algorithm06 = new Algorithm06();
+        int[] prefect = algorithm06.prefect(arr, 4);
+        System.out.println(Arrays.toString(prefect));
     }
 }
