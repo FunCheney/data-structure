@@ -28,6 +28,7 @@
 ##### 1.1.2 有序数组
 &ensp;&ensp;有序数组是一种特殊的数组，其中的数据是按照关键字的升序（或降序）排列的，这种排列使得快速查找数据项可以较快速的实现，使用**二分查找**。
 
+&ensp;&ensp;&ensp;&ensp;[数组有序]
 
 &ensp;&ensp;&ensp;&ensp;[二分查找]
  
@@ -86,5 +87,5 @@ NODE{
 [平衡树]:https://github.com/FunCheney/data-structure/tree/master/src/main/java/com/fchen/datastructure/tree#2-平衡树
 
 
-
+[数组有序]
 [二分查找]
